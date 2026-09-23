@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cqk1rjw7rm52g"]
+
+[ext_resource type="Script" uid="uid://bhi5yatpjd06y" path="res://Scripts/word.gd" id="1_eb40e"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yuwuw"]
+
+[node name="Word" type="Control" unique_id=46462744]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 6.0479736
+offset_bottom = 0.32000732
+script = ExtResource("1_eb40e")
+
+[node name="Label" type="Label" parent="." unique_id=126049233]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -11.5
+offset_right = 18.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2106629452]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_yuwuw")
+
+[connection signal="resized" from="Label" to="." method="_on_label_resized"]

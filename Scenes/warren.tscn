@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dpobaxn258lo0"]
+
+[ext_resource type="Texture2D" uid="uid://xmdxwd5w10jo" path="res://icon.svg" id="1_a4hpq"]
+[ext_resource type="Script" uid="uid://bsvpd4lc7vtp0" path="res://Scripts/warren.gd" id="1_tvmj7"]
+
+[node name="Warren" type="Node2D" unique_id=115603645]
+script = ExtResource("1_tvmj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1433593968]
+self_modulate = Color(0.9771847, 2.5990605e-06, 0.6013995, 1)
+texture = ExtResource("1_a4hpq")

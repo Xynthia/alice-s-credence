@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b85g32gol80go"]
+
+[ext_resource type="Script" uid="uid://bp4liwo77wmtu" path="res://Scripts/slot_word.gd" id="1_eetlm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24de5"]
+
+[node name="SlotWord" type="Area2D" unique_id=827327125]
+script = ExtResource("1_eetlm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1275602215]
+shape = SubResource("RectangleShape2D_24de5")
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]

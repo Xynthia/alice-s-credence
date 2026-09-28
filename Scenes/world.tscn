@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://coytepc4mxrb6" path="res://Scripts/world.gd" id="1_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://dtjxh33u1qv51" path="res://Scenes/question.tscn" id="2_5a7ea"]
-[ext_resource type="PackedScene" uid="uid://cqk1rjw7rm52g" path="res://Scenes/word.tscn" id="3_8j60k"]
+[ext_resource type="Script" uid="uid://cijbmb0253tg1" path="res://Scripts/managers/word_manager.gd" id="4_8j60k"]
 
 [node name="World" type="Node2D" unique_id=849332814]
 script = ExtResource("1_5a7ea")
@@ -13,8 +13,5 @@ offset_top = 160.0
 offset_right = 112.0
 offset_bottom = 160.0
 
-[node name="Word" parent="." unique_id=959327949 instance=ExtResource("3_8j60k")]
-position = Vector2(648, 120)
-
-[node name="Word2" parent="." unique_id=1986180753 instance=ExtResource("3_8j60k")]
-position = Vector2(544, 216)
+[node name="WordManager" type="Node2D" parent="." unique_id=1767808279]
+script = ExtResource("4_8j60k")

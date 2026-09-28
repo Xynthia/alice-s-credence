@@ -5,6 +5,7 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yuwuw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_24de5"]
+resource_local_to_scene = true
 
 [node name="Word" type="Area2D" unique_id=959327949]
 z_index = 1
@@ -12,15 +13,9 @@ script = ExtResource("1_eb40e")
 
 [node name="Label" type="Label" parent="." unique_id=126049233]
 z_index = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -18.0
-offset_top = -11.5
-offset_right = 18.0
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "test"
@@ -37,10 +32,11 @@ grow_vertical = 2
 texture = SubResource("PlaceholderTexture2D_yuwuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=38377713]
+unique_name_in_owner = true
 shape = SubResource("RectangleShape2D_24de5")
 
-[connection signal="area_entered" from="." to="." method="_on_word_area_entered"]
 [connection signal="area_entered" from="." to="." method="_on_slot_word_area_entered"]
+[connection signal="area_entered" from="." to="." method="_on_word_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_slot_word_area_exited"]
 [connection signal="area_exited" from="." to="." method="_on_word_area_exited"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://de5bfo2iwgl71"]
+
+[ext_resource type="Script" uid="uid://dywb406vr7uvb" path="res://scripts/portrait.gd" id="1_k07cr"]
+[ext_resource type="Texture2D" uid="uid://dkffjlo7kw5m0" path="res://assets/Pixelart Study - Expression Sheets - Full/Pixelart Study - Expression Sheet - Profile - 16x16.png" id="2_31ep3"]
+
+[node name="Portrait" type="Control" unique_id=1975851654]
+texture_filter = 1
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 320.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_k07cr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1861152504]
+scale = Vector2(20, 20)
+texture = ExtResource("2_31ep3")
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 48, 16, 16)

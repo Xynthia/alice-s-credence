@@ -11,10 +11,15 @@ config_version=5
 [application]
 
 config/name="Alice's Credence"
-run/main_scene="uid://bkb2vyotiy0tr"
+run/main_scene="uid://bpdwbiylaegb"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
+
+[autoload]
+
+CutsceneManager="*uid://gnq3263ohpj5"
+WordManager="*uid://cijbmb0253tg1"
 
 [display]
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharachterInfo" format=3 uid="uid://bqk2c7oc1d733"]
+
+[ext_resource type="Script" uid="uid://lfpo1naeky51" path="res://resources/charachter_info.gd" id="1_imlxq"]
+
+[resource]
+script = ExtResource("1_imlxq")
+first_name = "char"
+last_name = "2"
+age = 300
+metadata/_custom_type_script = "uid://lfpo1naeky51"

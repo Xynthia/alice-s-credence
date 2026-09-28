@@ -14,8 +14,8 @@ var word_manager : WordManager
 		word = value
 		if label:
 			set_label(value)
-@export var margin_word : int = 10
 
+@export var margin_word : int = 10
 
 var slot_word : SlotWord
 var other_word : Word
@@ -27,20 +27,23 @@ var delay : int = 10
 var moving_tween : Tween = Tween.new()
 
 
-
 func _ready() -> void:
-	world = get_parent().get_parent()
+	#world = get_parent().get_parent()
 	word_manager = get_parent()
 	set_label(word)
 
 func _process(delta: float) -> void:
+	pass
 	if dragging:
 		moving_tween = create_tween()
 		moving_tween.tween_property(self, "global_position", get_global_mouse_position() - mouse_offset, delay * delta)
 	else:
 		moving_tween.kill()
-	print(dragging)
-	
+
+
+func visible(value : bool) -> void:
+	label.visible = value
+	nine_patch_rect.visible = value
 
 func set_label(new_word : String) -> void:
 	label.text = new_word
@@ -107,7 +110,6 @@ func _on_word_area_exited(area: Area2D) -> void:
 func _on_slot_word_area_entered(area: SlotWord) -> void:
 	if !area.is_filled:
 		slot_word = area
-
 
 func _on_slot_word_area_exited(area: SlotWord) -> void:
 	if area.is_filled:

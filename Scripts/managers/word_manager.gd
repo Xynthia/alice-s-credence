@@ -1,4 +1,3 @@
-class_name WordManager
 extends Node2D
 
 var words : Array[Word]
@@ -6,8 +5,9 @@ const WORD = preload("uid://cqk1rjw7rm52g")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	instance_word()
-	instance_word()
+	pass
+	#instance_word()
+	#instance_word()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,8 +20,11 @@ func _process(delta: float) -> void:
 
 
 
-func instance_word()-> void:
+func instance_word(value : Variant)-> void:
 	var new_word : Word = WORD.instantiate()
 	words.append(new_word)
-	new_word.name = "Word" + str(words.size()-1)
+	new_word.word = value	
+	words.find(value)
+	new_word.name = new_word.word
+	
 	add_child(new_word)

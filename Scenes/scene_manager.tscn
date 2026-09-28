@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bpdwbiylaegb"]
+
+[ext_resource type="Script" uid="uid://coytepc4mxrb6" path="res://Scripts/world.gd" id="1_aq7jj"]
+[ext_resource type="PackedScene" uid="uid://du03nydmw56w8" path="res://Scenes/dialog_ui.tscn" id="1_we8k5"]
+[ext_resource type="Resource" uid="uid://bypm1us0rk682" path="res://resources/charachter info/char1.tres" id="2_hhobr"]
+[ext_resource type="Script" uid="uid://c2wmtfnafrvdl" path="res://resources/dialog_line.gd" id="3_cjhpt"]
+[ext_resource type="Script" uid="uid://lfpo1naeky51" path="res://resources/charachter_info.gd" id="3_wofdf"]
+[ext_resource type="Script" uid="uid://v8q6baj25iv2" path="res://resources/expression_charachters.gd" id="4_hhobr"]
+[ext_resource type="Script" uid="uid://bslh1h6kilg2j" path="res://resources/move_charachter.gd" id="5_wofdf"]
+[ext_resource type="Script" uid="uid://hvdj3dvv56ce" path="res://resources/dialog_activator.gd" id="6_kad1h"]
+[ext_resource type="PackedScene" uid="uid://8bj4qq3u5pws" path="res://Scenes/charachter.tscn" id="7_hhobr"]
+[ext_resource type="Resource" uid="uid://bqk2c7oc1d733" path="res://resources/charachter info/char2.tres" id="7_kad1h"]
+[ext_resource type="PackedScene" uid="uid://dhemcwbn54pp3" path="res://Scenes/player.tscn" id="8_wofdf"]
+[ext_resource type="PackedScene" uid="uid://dtjxh33u1qv51" path="res://Scenes/question.tscn" id="10_ccwmf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yuwuw"]
+
+[sub_resource type="Resource" id="Resource_q7wi7"]
+script = ExtResource("3_cjhpt")
+text = "Lorem ipsum [url=\"dolor\"] dolor [/url] sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+in_convo_with = ExtResource("2_hhobr")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_cjhpt"]
+script = ExtResource("3_cjhpt")
+text = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+in_convo_with = ExtResource("7_kad1h")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_wofdf"]
+script = ExtResource("3_cjhpt")
+text = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+in_convo_with = ExtResource("2_hhobr")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_hhobr"]
+script = ExtResource("3_cjhpt")
+text = "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+in_convo_with = ExtResource("7_kad1h")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_2f4wt"]
+script = ExtResource("6_kad1h")
+dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_q7wi7"), SubResource("Resource_cjhpt"), SubResource("Resource_wofdf"), SubResource("Resource_hhobr")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[node name="SceneManager" type="Node" unique_id=377594497]
+
+[node name="World2D" type="Node2D" parent="." unique_id=1824969446]
+script = ExtResource("1_aq7jj")
+
+[node name="Area2D" type="StaticBody2D" parent="World2D" unique_id=268849469]
+position = Vector2(0, 328)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/Area2D" unique_id=1838540741]
+shape = SubResource("WorldBoundaryShape2D_yuwuw")
+
+[node name="Charachter" parent="World2D" unique_id=1665900511 instance=ExtResource("7_hhobr")]
+position = Vector2(488, 0)
+info = ExtResource("2_hhobr")
+dialog = SubResource("Resource_2f4wt")
+
+[node name="Player" parent="World2D" unique_id=579807962 instance=ExtResource("8_wofdf")]
+
+[node name="World3D" type="Node3D" parent="." unique_id=755156172]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=223071471]
+
+[node name="DialogUI" parent="UI" unique_id=1368191503 instance=ExtResource("1_we8k5")]
+
+[node name="Question" parent="UI" unique_id=212995157 instance=ExtResource("10_ccwmf")]
+visible = false
+anchors_preset = -1
+anchor_left = 0.067
+anchor_top = 0.66400003
+anchor_right = 0.938
+anchor_bottom = 0.93700004
+offset_left = 498.81598
+offset_top = -82.27203
+offset_right = -504.57605
+offset_bottom = -259.17603

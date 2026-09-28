@@ -13,5 +13,3 @@ func _process(delta: float) -> void:
 func asking_alice_question() -> void:
 	var question : String = "test 2"
 	world.alice.alice_receiving_question(question)
-	
-	

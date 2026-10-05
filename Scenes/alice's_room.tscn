@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dn8q6nuhyeo08"]
+
+[ext_resource type="Texture2D" uid="uid://bht7u10ugd0qm" path="res://assets/placeholders/alice kamer.jpg" id="1_hi0fx"]
+[ext_resource type="PackedScene" uid="uid://o3ifp6rkj6oy" path="res://Scenes/alice.tscn" id="2_tib3v"]
+
+[node name="Alice\'s Room" type="Node2D" unique_id=347352623]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1556364825]
+position = Vector2(580.5034, 323.99997)
+scale = Vector2(0.41322312, 0.41322312)
+texture = ExtResource("1_hi0fx")
+
+[node name="Alice" parent="." unique_id=75483037 instance=ExtResource("2_tib3v")]
+position = Vector2(584, 472)

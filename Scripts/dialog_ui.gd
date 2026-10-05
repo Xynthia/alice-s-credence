@@ -26,10 +26,6 @@ func _ready() -> void:
 	CutsceneManager.dialog_ui = self
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func show_charachter_amount(amount : int) -> void:
 	match amount:
 		1:
@@ -89,9 +85,5 @@ func _on_dialog_text_label_meta_hover_started(meta: Variant) -> void:
 
 
 func _on_gui_input(event: InputEvent) -> void:
-	if !on_dialog_text_label_meta_hover:
+	if event.is_action("mouse left click") && !on_dialog_text_label_meta_hover:
 		CutsceneManager.continue_dialog()
-
-
-func _on_mouse_entered() -> void:
-	print(1)

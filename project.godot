@@ -20,15 +20,20 @@ config/icon="res://icon.svg"
 
 CutsceneManager="*uid://gnq3263ohpj5"
 WordManager="*uid://cijbmb0253tg1"
+GameManager="*uid://mr1nba0ja3a6"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/drag_and_drop/plugin.cfg")
+
 [input]
 
-"mouse left click"={
+draggable_click={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]

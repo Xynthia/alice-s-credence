@@ -9,7 +9,7 @@ var world : World
 var last_question_asked : String = "test"
 
 func _ready() -> void:
-	world = get_parent()
+	GameManager.alice = self
 
 func alice_receiving_question(question : String) -> void:
 	if question == last_question_asked:
@@ -53,3 +53,7 @@ func interact() -> void:
 
 func talk_about() -> void:
 	pass
+
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	GameManager.warren.asking_alice_question()

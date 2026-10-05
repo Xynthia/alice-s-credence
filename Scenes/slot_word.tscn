@@ -1,14 +1,35 @@
 [gd_scene format=3 uid="uid://b85g32gol80go"]
 
 [ext_resource type="Script" uid="uid://bp4liwo77wmtu" path="res://Scripts/slot_word.gd" id="1_eetlm"]
+[ext_resource type="Script" uid="uid://nj1hdjl1vob2" path="res://addons/drag_and_drop/scripts/drop_zone.gd" id="2_ycpq1"]
+[ext_resource type="Script" uid="uid://b5wqxyc42r5u" path="res://addons/drag_and_drop/resources/drop_behaviors/drop_behavior_reject.gd" id="3_pxfuw"]
+[ext_resource type="Script" uid="uid://djdmnemxrx7bg" path="res://addons/drag_and_drop/resources/draggable_types/draggable_type.gd" id="4_g2w03"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_24de5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycpq1"]
+size = Vector2(160, 20)
 
-[node name="SlotWord" type="Area2D" unique_id=827327125]
+[sub_resource type="Resource" id="Resource_ycpq1"]
+script = ExtResource("3_pxfuw")
+
+[sub_resource type="Resource" id="Resource_pxfuw"]
+script = ExtResource("4_g2w03")
+
+[node name="SlotWord" type="Node2D" unique_id=58379488]
 script = ExtResource("1_eetlm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1275602215]
-shape = SubResource("RectangleShape2D_24de5")
+[node name="Area2D" type="Area2D" parent="." unique_id=1443430389]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1275602215]
+position = Vector2(70, 0)
+shape = SubResource("RectangleShape2D_ycpq1")
+
+[node name="DropZone" type="Node2D" parent="Area2D" unique_id=375451525 node_paths=PackedStringArray("attach_spot")]
+script = ExtResource("2_ycpq1")
+attach_spot = NodePath("..")
+drop_behavior = SubResource("Resource_ycpq1")
+snap_style = 0
+accepted_draggable_types = Array[ExtResource("4_g2w03")]([SubResource("Resource_pxfuw")])
+metadata/_custom_type_script = "uid://nj1hdjl1vob2"
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]

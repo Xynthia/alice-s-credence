@@ -1,20 +1,44 @@
-[gd_scene format=3 uid="uid://dtjxh33u1qv51"]
+[gd_scene format=3 uid="uid://dvuaf7wbonmsd"]
 
-[ext_resource type="PackedScene" uid="uid://b85g32gol80go" path="res://Scenes/slot_word.tscn" id="1_3w3ul"]
+[ext_resource type="Script" uid="uid://b1dhrrih8aklt" path="res://Scripts/question.gd" id="1_ntbrc"]
+[ext_resource type="Script" uid="uid://nj1hdjl1vob2" path="res://addons/drag_and_drop/scripts/drop_zone.gd" id="1_t7qk5"]
+[ext_resource type="Script" uid="uid://b5wqxyc42r5u" path="res://addons/drag_and_drop/resources/drop_behaviors/drop_behavior_reject.gd" id="2_ntbrc"]
+[ext_resource type="Script" uid="uid://djdmnemxrx7bg" path="res://addons/drag_and_drop/resources/draggable_types/draggable_type.gd" id="3_hsh21"]
+[ext_resource type="PackedScene" uid="uid://cqk1rjw7rm52g" path="res://Scenes/word.tscn" id="4_nojmr"]
+[ext_resource type="PackedScene" uid="uid://b85g32gol80go" path="res://Scenes/slot_word.tscn" id="5_p4ta5"]
 
-[node name="Question" type="Control" unique_id=212995157]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2226"]
+size = Vector2(1151, 390)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1226799405]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="Resource" id="Resource_37i2y"]
+script = ExtResource("2_ntbrc")
 
-[node name="SlotWord" parent="HBoxContainer" unique_id=1614941161 instance=ExtResource("1_3w3ul")]
+[sub_resource type="Resource" id="Resource_jrfug"]
+script = ExtResource("3_hsh21")
+
+[node name="Question" type="Node2D" unique_id=1364450598]
+script = ExtResource("1_ntbrc")
+
+[node name="words" type="Node2D" parent="." unique_id=362009250]
+
+[node name="Area2D" type="Area2D" parent="words" unique_id=612787709]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="words/Area2D" unique_id=895552145]
+position = Vector2(575.5, 196)
+shape = SubResource("RectangleShape2D_e2226")
+
+[node name="DropZone" type="Node2D" parent="words/Area2D" unique_id=2001309452 node_paths=PackedStringArray("attach_spot")]
+script = ExtResource("1_t7qk5")
+attach_spot = NodePath("..")
+drop_behavior = SubResource("Resource_37i2y")
+snap_style = 0
+accepted_draggable_types = Array[ExtResource("3_hsh21")]([SubResource("Resource_jrfug")])
+metadata/_custom_type_script = "uid://nj1hdjl1vob2"
+
+[node name="Word" parent="." unique_id=1830129822 instance=ExtResource("4_nojmr")]
+process_mode = 3
+position = Vector2(248, 232)
+word = "test3"
+
+[node name="SlotWord" parent="." unique_id=58379488 instance=ExtResource("5_p4ta5")]
+position = Vector2(576, 536)

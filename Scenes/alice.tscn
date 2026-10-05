@@ -1,14 +1,24 @@
 [gd_scene format=3 uid="uid://o3ifp6rkj6oy"]
 
 [ext_resource type="Script" uid="uid://bgbtm2rrhjpub" path="res://Scripts/alice.gd" id="1_rhw7d"]
-[ext_resource type="Texture2D" uid="uid://xmdxwd5w10jo" path="res://icon.svg" id="2_kyaoa"]
+[ext_resource type="Texture2D" uid="uid://depyxgll125av" path="res://assets/placeholders/alice.jpg" id="2_rhw7d"]
 [ext_resource type="Script" uid="uid://do45pkuuujc8i" path="res://Scripts/wonderbar.gd" id="3_3x3wx"]
 
-[node name="Alice" type="Node2D" unique_id=75483037]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuwuw"]
+size = Vector2(122, 163)
+
+[node name="Alice" type="Area2D" unique_id=1413082255]
 script = ExtResource("1_rhw7d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1284253535]
-texture = ExtResource("2_kyaoa")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_rhw7d")
 
 [node name="Wonderbar" type="Node" parent="." unique_id=491516695]
 script = ExtResource("3_3x3wx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751381632]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_yuwuw")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

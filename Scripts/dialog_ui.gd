@@ -86,3 +86,12 @@ func _on_dialog_text_label_meta_hover_ended(meta: Variant) -> void:
 
 func _on_dialog_text_label_meta_hover_started(meta: Variant) -> void:
 	on_dialog_text_label_meta_hover = true
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if !on_dialog_text_label_meta_hover:
+		CutsceneManager.continue_dialog()
+
+
+func _on_mouse_entered() -> void:
+	print(1)

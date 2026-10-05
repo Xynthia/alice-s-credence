@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8bj4qq3u5pws"]
 
-[ext_resource type="Script" uid="uid://bqkyuq4jyw24x" path="res://scripts/charachter.gd" id="1_jivrl"]
+[ext_resource type="Script" uid="uid://bqkyuq4jyw24x" path="res://Scripts/charachter.gd" id="1_jivrl"]
 [ext_resource type="Texture2D" uid="uid://bve02mq4witqa" path="res://assets/Eris Esra's Character Template 4.1/16x32/16x32 Idle-Sheet.png" id="2_2f4wt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2f4wt"]
@@ -146,6 +146,7 @@ height = 26.0
 texture_filter = 1
 scale = Vector2(3, 3)
 collision_layer = 16385
+input_pickable = true
 script = ExtResource("1_jivrl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1155053790]
@@ -156,3 +157,7 @@ autoplay = "idle facing"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=280806735]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_2f4wt")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

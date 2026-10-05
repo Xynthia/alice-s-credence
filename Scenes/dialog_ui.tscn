@@ -17,6 +17,7 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [node name="DialogUI" type="Control" unique_id=1368191503]
+z_index = 1
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
@@ -267,6 +268,8 @@ text = "Lorem ipsum"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="meta_clicked" from="box/DialogText/DialogTextLabel" to="." method="_on_dialog_text_label_meta_clicked"]
 [connection signal="meta_hover_ended" from="box/DialogText/DialogTextLabel" to="." method="_on_dialog_text_label_meta_hover_ended"]
 [connection signal="meta_hover_started" from="box/DialogText/DialogTextLabel" to="." method="_on_dialog_text_label_meta_hover_started"]

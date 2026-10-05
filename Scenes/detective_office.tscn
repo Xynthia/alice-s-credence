@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2jx13l6xuw83"]
+
+[ext_resource type="Texture2D" uid="uid://4s0qs5755csw" path="res://assets/placeholders/detective kamer.jpg" id="1_j2eed"]
+
+[node name="Detective office" type="Node2D" unique_id=1198369454]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1145745274]
+position = Vector2(563, 362)
+scale = Vector2(0.51054853, 0.51054853)
+texture = ExtResource("1_j2eed")

@@ -9,10 +9,9 @@ var is_filled : bool = false
 
 
 func _on_child_entered_tree(word: Word) -> void:
-	pass
-	#is_filled = true
-	#rectangle.size = word.rectangle.size
-	#question_ui.create_slot_word()
+	is_filled = true
+	rectangle.size = word.rectangle.size
+	question_ui.create_slot_word()
 
 func _on_child_exiting_tree(word: Word) -> void:
 	is_filled = false

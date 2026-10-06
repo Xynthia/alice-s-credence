@@ -18,16 +18,15 @@ script = ExtResource("3_hsh21")
 
 [node name="Question" type="Node2D" unique_id=1364450598]
 script = ExtResource("1_ntbrc")
+metadata/_edit_horizontal_guides_ = [493.0]
 
-[node name="words" type="Node2D" parent="." unique_id=362009250]
+[node name="Area2D" type="Area2D" parent="." unique_id=612787709]
 
-[node name="Area2D" type="Area2D" parent="words" unique_id=612787709]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="words/Area2D" unique_id=895552145]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=895552145]
 position = Vector2(575.5, 196)
 shape = SubResource("RectangleShape2D_e2226")
 
-[node name="DropZone" type="Node2D" parent="words/Area2D" unique_id=2001309452 node_paths=PackedStringArray("attach_spot")]
+[node name="DropZone" type="Node2D" parent="Area2D" unique_id=2001309452 node_paths=PackedStringArray("attach_spot")]
 script = ExtResource("1_t7qk5")
 attach_spot = NodePath("..")
 drop_behavior = SubResource("Resource_37i2y")
@@ -40,5 +39,42 @@ process_mode = 3
 position = Vector2(248, 232)
 word = "test3"
 
-[node name="SlotWord" parent="." unique_id=58379488 instance=ExtResource("5_p4ta5")]
-position = Vector2(576, 536)
+[node name="Question" type="Node2D" parent="." unique_id=1241909581]
+position = Vector2(376, 464)
+
+[node name="Control" type="HBoxContainer" parent="Question" unique_id=752020426]
+offset_right = 203.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Question/Control" unique_id=310766232]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+text = "Alice can you "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="Question/Control" unique_id=1105042983]
+layout_mode = 2
+alignment = 1
+selected = 0
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "look at"
+popup/item_0/id = 0
+popup/item_1/text = "use"
+popup/item_1/id = 1
+popup/item_2/text = "walk to"
+popup/item_2/id = 2
+
+[node name="Control" type="Control" parent="Question/Control" unique_id=1286948518]
+custom_minimum_size = Vector2(161.56, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Question/Control" unique_id=650262812]
+layout_mode = 2
+text = "?"
+vertical_alignment = 1
+
+[node name="SlotWord" parent="Question" unique_id=58379488 instance=ExtResource("5_p4ta5")]
+position = Vector2(288, 22)

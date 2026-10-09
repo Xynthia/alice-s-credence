@@ -56,4 +56,5 @@ func talk_about() -> void:
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	GameManager.warren.asking_alice_question()
+	pass
+	#GameManager.warren.asking_alice_question()

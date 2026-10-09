@@ -13,6 +13,7 @@ script = ExtResource("3_pq25i")
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yuwuw"]
 
 [node name="Word" type="Area2D" unique_id=601017787]
+z_index = 99
 script = ExtResource("1_eb40e")
 word = "test"
 

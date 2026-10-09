@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cqk1rjw7rm52g"]
+
+[ext_resource type="Script" uid="uid://bhi5yatpjd06y" path="res://Scripts/word.gd" id="1_eb40e"]
+[ext_resource type="Script" uid="uid://crmnw3ldr3xev" path="res://addons/drag_and_drop/scripts/draggable.gd" id="2_yt6yk"]
+[ext_resource type="Script" uid="uid://djdmnemxrx7bg" path="res://addons/drag_and_drop/resources/draggable_types/draggable_type.gd" id="3_pq25i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24de5"]
+resource_local_to_scene = true
+
+[sub_resource type="Resource" id="Resource_yt6yk"]
+script = ExtResource("3_pq25i")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yuwuw"]
+
+[node name="Word" type="Area2D" unique_id=601017787]
+script = ExtResource("1_eb40e")
+word = "test"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=38377713]
+shape = SubResource("RectangleShape2D_24de5")
+
+[node name="Draggable" type="Node" parent="." unique_id=723700361]
+script = ExtResource("2_yt6yk")
+type = SubResource("Resource_yt6yk")
+metadata/_custom_type_script = "uid://crmnw3ldr3xev"
+
+[node name="Label" type="Label" parent="." unique_id=126049233]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -11.5
+offset_right = 18.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2106629452]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_yuwuw")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="resized" from="Label" to="." method="_on_label_resized"]

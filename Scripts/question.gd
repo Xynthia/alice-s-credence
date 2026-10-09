@@ -6,6 +6,7 @@ extends Node2D
 const SLOT_WORD = preload("uid://b85g32gol80go")
 
 @onready var slot_word: SlotWord = $SlotWord
+@onready var option_button: OptionButton = $Control/OptionButton
 
 var newest_slot_word : SlotWord 
 
@@ -21,3 +22,8 @@ func create_slot_word() -> void:
 	
 	new_slot_word.global_position = newest_slot_word.global_position
 	new_slot_word.global_position.x = newest_slot_word.global_position.x + space_between_slot_words
+
+
+func _on_button_pressed() -> void:
+	var question_string : String = "Alice can you " + str(option_button.get_item_text(option_button.selected)) + " " + str(slot_word.word.word) +"?"
+	GameManager.warren.asking_alice_question(question_string)

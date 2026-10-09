@@ -7,6 +7,6 @@ func _ready() -> void:
 	GameManager.warren = self
 
 
-func asking_alice_question() -> void:
-	var question : String = "test 2"
+func asking_alice_question(question : String) -> void:
+	#var question : String = "test 2"
 	GameManager.alice.alice_receiving_question(question)

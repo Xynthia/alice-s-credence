@@ -8,6 +8,7 @@ var word_manager : WordManager
 @onready var nine_patch_rect: NinePatchRect = $NinePatchRect
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var rectangle : RectangleShape2D = collision_shape_2d.shape
+@onready var draggable: Draggable = $Draggable
 
 @export var word : String:
 	set(value):

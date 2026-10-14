@@ -26,4 +26,12 @@ func create_slot_word() -> void:
 
 func _on_button_pressed() -> void:
 	var question_string : String = "Alice can you " + str(option_button.get_item_text(option_button.selected)) + " " + str(slot_word.word.word) +"?"
-	GameManager.warren.asking_alice_question(question_string)
+	var item : Item = GameManager.item_manager.find_word(slot_word.word)
+	if item:
+		GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
+	else:
+		print("no item found")
+
+
+func _on_return_button_pressed() -> void:
+	GameManager.scene_manager.close_question_screen()

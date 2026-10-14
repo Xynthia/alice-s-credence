@@ -13,7 +13,6 @@ extends Control
 @onready var name_box_left: Control = $box/NameBoxLeft
 @onready var name_box_right: Control = $box/NameBoxRight
 
-var text_appear_speed : int = 5
 var showing_full_line_text : bool = true
 
 var tween : Tween = create_tween()
@@ -55,7 +54,10 @@ func change_dialog_text(new_text : String)-> void:
 	if !tween.is_valid():
 		tween = create_tween()
 	
-	tween.tween_property(dialog_text_label, "visible_ratio", 1 , text_appear_speed)
+	var characters_per_second: float = 30.0
+	var duration: float = new_text.length() / characters_per_second
+	
+	tween.tween_property(dialog_text_label, "visible_ratio", 1 , duration)
 	await tween.finished
 	showing_full_line_text = true
 
@@ -73,7 +75,7 @@ func see_full_dialog_text()-> void:
 
 
 func _on_dialog_text_label_meta_clicked(meta: Variant) -> void:
-	WordManager.instance_word(meta)
+	GameManager.word_manager.instance_word(meta)
 
 
 func _on_dialog_text_label_meta_hover_ended(meta: Variant) -> void:

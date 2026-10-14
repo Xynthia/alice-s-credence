@@ -11,7 +11,6 @@ var in_dialog : bool = false
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 func start_dialog(next_dialog : DialogActivator) -> void:
 	if next_dialog:
 		in_dialog = true

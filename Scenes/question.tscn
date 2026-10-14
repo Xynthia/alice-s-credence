@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b1dhrrih8aklt" path="res://Scripts/question.gd" id="1_ntbrc"]
 [ext_resource type="Script" uid="uid://nj1hdjl1vob2" path="res://addons/drag_and_drop/scripts/drop_zone.gd" id="1_t7qk5"]
+[ext_resource type="Script" uid="uid://cijbmb0253tg1" path="res://Scripts/managers/word_manager.gd" id="2_hsh21"]
 [ext_resource type="Script" uid="uid://b5wqxyc42r5u" path="res://addons/drag_and_drop/resources/drop_behaviors/drop_behavior_reject.gd" id="2_ntbrc"]
 [ext_resource type="Script" uid="uid://djdmnemxrx7bg" path="res://addons/drag_and_drop/resources/draggable_types/draggable_type.gd" id="3_hsh21"]
-[ext_resource type="PackedScene" uid="uid://cqk1rjw7rm52g" path="res://Scenes/word.tscn" id="4_nojmr"]
 [ext_resource type="PackedScene" uid="uid://b85g32gol80go" path="res://Scenes/slot_word.tscn" id="5_p4ta5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2226"]
@@ -19,6 +19,12 @@ script = ExtResource("3_hsh21")
 [node name="Question" type="Node2D" unique_id=1364450598]
 script = ExtResource("1_ntbrc")
 metadata/_edit_horizontal_guides_ = [493.0]
+
+[node name="ReturnButton" type="Button" parent="." unique_id=1696824915]
+z_index = 99
+offset_right = 71.0
+offset_bottom = 40.0
+text = "RETURN"
 
 [node name="Control" type="HBoxContainer" parent="." unique_id=752020426]
 offset_left = 376.0
@@ -65,6 +71,7 @@ mouse_behavior_recursive = 2
 text = "SUBMIT"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=612787709]
+script = ExtResource("2_hsh21")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=895552145]
 position = Vector2(575.5, 196)
@@ -78,12 +85,8 @@ snap_style = 0
 accepted_draggable_types = Array[ExtResource("3_hsh21")]([SubResource("Resource_jrfug")])
 metadata/_custom_type_script = "uid://nj1hdjl1vob2"
 
-[node name="Word" parent="." unique_id=1830129822 instance=ExtResource("4_nojmr")]
-process_mode = 3
-position = Vector2(248, 232)
-word = "test3"
-
 [node name="SlotWord" parent="." unique_id=58379488 instance=ExtResource("5_p4ta5")]
 position = Vector2(664, 486)
 
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

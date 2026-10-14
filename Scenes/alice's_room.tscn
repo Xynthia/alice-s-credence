@@ -2,13 +2,89 @@
 
 [ext_resource type="Texture2D" uid="uid://bht7u10ugd0qm" path="res://assets/placeholders/alice kamer.jpg" id="1_hi0fx"]
 [ext_resource type="PackedScene" uid="uid://o3ifp6rkj6oy" path="res://Scenes/alice.tscn" id="2_tib3v"]
+[ext_resource type="Script" uid="uid://blfectvdtxxbe" path="res://Scripts/item.gd" id="3_tib3v"]
+[ext_resource type="Script" uid="uid://lfpo1naeky51" path="res://resources/charachter_info.gd" id="4_q0hro"]
+[ext_resource type="Script" uid="uid://c2wmtfnafrvdl" path="res://resources/dialog_line.gd" id="5_20rqy"]
+[ext_resource type="Script" uid="uid://v8q6baj25iv2" path="res://resources/expression_charachters.gd" id="6_ybqny"]
+[ext_resource type="Script" uid="uid://bslh1h6kilg2j" path="res://resources/move_charachter.gd" id="7_bh3ae"]
+[ext_resource type="Script" uid="uid://hvdj3dvv56ce" path="res://resources/dialog_activator.gd" id="8_ytjoy"]
+[ext_resource type="Script" uid="uid://dsxdcmd01630g" path="res://Scripts/managers/item_manager.gd" id="9_20rqy"]
+
+[sub_resource type="Resource" id="Resource_8kog0"]
+script = ExtResource("5_20rqy")
+text = "1"
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_tib3v"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_8kog0")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_4vr70"]
+script = ExtResource("5_20rqy")
+text = "0"
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_hbesd"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_4vr70")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_q0hro"]
+script = ExtResource("5_20rqy")
+text = "-1"
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_xvbaa"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_q0hro")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24de5"]
+size = Vector2(306.45, 210.045)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swqr5"]
+size = Vector2(201.735, 236.125)
 
 [node name="Alice\'s Room" type="Node2D" unique_id=347352623]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1556364825]
+[node name="BG" type="Sprite2D" parent="." unique_id=1556364825]
 position = Vector2(580.5034, 323.99997)
 scale = Vector2(0.41322312, 0.41322312)
 texture = ExtResource("1_hi0fx")
 
 [node name="Alice" parent="." unique_id=75483037 instance=ExtResource("2_tib3v")]
 position = Vector2(584, 472)
+
+[node name="ItemManager" type="Node2D" parent="." unique_id=68480514]
+script = ExtResource("9_20rqy")
+
+[node name="box" type="Node2D" parent="ItemManager" unique_id=1901377699]
+script = ExtResource("3_tib3v")
+own_word_name = "box"
+
+[node name="bed" type="Node2D" parent="ItemManager" unique_id=808575280 node_paths=PackedStringArray("item_to_give")]
+position = Vector2(833.965, 523.965)
+script = ExtResource("3_tib3v")
+own_word_name = "Bed"
+truthfull_dialog = SubResource("Resource_tib3v")
+half_truthfull_dialog = SubResource("Resource_hbesd")
+not_truthfull_dialog = SubResource("Resource_xvbaa")
+item_to_give = [NodePath("../box")]
+
+[node name="Area2D" type="Area2D" parent="ItemManager/bed" unique_id=682066720]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/bed/Area2D" unique_id=2055717480]
+shape = SubResource("RectangleShape2D_24de5")
+
+[node name="Cabinet" type="Node2D" parent="ItemManager" unique_id=1333940507]
+position = Vector2(259, 519)
+script = ExtResource("3_tib3v")
+own_word_name = "Cabinet"
+
+[node name="Area2D" type="Area2D" parent="ItemManager/Cabinet" unique_id=1214430649]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/Cabinet/Area2D" unique_id=1873093859]
+shape = SubResource("RectangleShape2D_swqr5")
+
+[connection signal="input_event" from="ItemManager/bed/Area2D" to="ItemManager/bed" method="_on_area_2d_input_event"]

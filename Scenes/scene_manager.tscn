@@ -45,7 +45,6 @@ script = ExtResource("1_vbxak")
 intro_dialog = SubResource("Resource_yuwuw")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1824969446]
-visible = false
 script = ExtResource("1_aq7jj")
 
 [node name="Detective office" parent="World2D" unique_id=1198369454 instance=ExtResource("2_ccwmf")]
@@ -85,6 +84,11 @@ wait_time = 1.1
 
 [node name="Warren" parent="World2D" unique_id=115603645 instance=ExtResource("10_aq7jj")]
 
+[node name="Question" parent="World2D" unique_id=1364450598 instance=ExtResource("12_ccwmf")]
+visible = false
+position = Vector2(496, 184)
+scale = Vector2(0.25, 0.25)
+
 [node name="World3D" type="Node3D" parent="." unique_id=755156172]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=223071471]
@@ -102,8 +106,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="DialogUI" parent="UI" unique_id=1368191503 instance=ExtResource("1_we8k5")]
 visible = false
-
-[node name="Question" parent="." unique_id=1364450598 instance=ExtResource("12_ccwmf")]
 
 [connection signal="input_event" from="World2D/ScreenArea2D" to="." method="_on_screen_area_2d_input_event"]
 [connection signal="input_event" from="World2D/OutsideScreenAreas/OutsideScreenArea" to="." method="_on_outside_screen_area_input_event"]

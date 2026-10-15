@@ -10,8 +10,13 @@ extends Node
 
 @onready var question: Question = $World2D/Question
 
+@onready var popup: Control = $UI/popup
+@onready var popup_panel: Panel = $UI/popup/popupPanel
+@onready var popup_rich_text_label: RichTextLabel = $UI/popup/popupRichTextLabel
+
 const black : Color = Color(0.0, 0.0, 0.0)
 const transparent : Color = Color(0.0, 0.0, 0.0, 0.0)
+const white : Color = Color.WHITE
 
 const zoom_camera : Vector2 = Vector2(3.0, 3.0)
 const normal_camera : Vector2 = Vector2(1.0, 1.0)
@@ -21,6 +26,8 @@ const normal_pos_camera : Vector2 = Vector2(576.0, 320.0)
 enum rooms {warrens_room, alice_room}
 
 var room_state : rooms = rooms.warrens_room
+
+var pop_time : float = 1
 
 var in_question : bool = false
 var can_interact : bool = false
@@ -66,12 +73,12 @@ func fade_out() -> void:
 		fading = true
 		can_interact = false
 		fade_in_out_screen.color = black
-		fade_in_out_screen.visible = true
 		var tween : Tween = create_tween()
 		tween.tween_property(fade_in_out_screen, "color", transparent, 3)
 		await tween.finished
 		can_interact = true
 		fading = false
+		fade_in_out_screen.visible = false
 
 func zoom_in() ->void:
 	if !zooming:
@@ -118,7 +125,25 @@ func close_question_screen() -> void:
 	question.visible = false
 	in_question = false
 
+func fade_in_popup() -> void:
+	popup.modulate = transparent
+	popup.visible = true
+	var tween : Tween = create_tween()
+	tween.tween_property(popup, "modulate", white, pop_time)
+	await tween.finished
 
+func fade_out_popup() -> void:
+	popup.modulate = white
+	var tween : Tween = create_tween()
+	tween.tween_property(popup, "modulate", transparent, pop_time)
+	await tween.finished
+	popup.visible = false
+
+func update_popup(word : Word) -> void:
+	popup_rich_text_label.text = word.word + " has been added!"
+	await fade_in_popup()
+	await get_tree().create_timer(pop_time).timeout
+	await fade_out_popup()
 
 func _on_outside_screen_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if can_interact && !in_question && event.is_action("draggable_click"):

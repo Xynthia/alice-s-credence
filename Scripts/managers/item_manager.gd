@@ -3,6 +3,10 @@ extends Node2D
 
 var items : Array[Item]
 
+@onready var bed: Item = $bed
+@onready var cabinet: Item = $Cabinet
+
+
 func _ready() -> void:
 	GameManager.item_manager = self
 

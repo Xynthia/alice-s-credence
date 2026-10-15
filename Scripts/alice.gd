@@ -24,7 +24,8 @@ func alice_receiving_question(question : String, action: actions, item : Item) -
 				actions.LOOK_AT:
 					talk_about(item.dialogs ,truthfull_state)
 				actions.USE:
-					move(item.global_position, truthfull_state)
+					if item == GameManager.item_manager.bed || item == GameManager.item_manager.cabinet:
+						move(item.global_position, truthfull_state)
 					interact(item,  truthfull_state)
 				actions.WALK_TO:
 					move(item.global_position, truthfull_state)
@@ -45,7 +46,7 @@ func compair_wonderbar_to_dice_roll() -> thruthfull_states:
 		truthfull_state = thruthfull_states.HALF_TRUTHFULLY
 	elif differance >= 0:
 		truthfull_state = thruthfull_states.THRUTHFULLY
-	elif differance <= 0:
+	elif differance < 0:
 		truthfull_state = thruthfull_states.NOT_TRUTHFULLY
 	else:
 		print("error: " , differance)
@@ -59,7 +60,7 @@ func move(new_pos: Vector2, truthfull_state: thruthfull_states) -> void:
 	tween.tween_property(self, "global_position", new_pos, 1)
 
 func interact(item : Item, truthfull_state: thruthfull_states) -> void:
-	if item.item_to_give[0]:
+	if item.item_to_give.size() > 0:
 		var next_item : Item = item.item_to_give[0]
 		
 		var check_excistance = next_item.check_if_word_excists()

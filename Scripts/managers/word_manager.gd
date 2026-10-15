@@ -14,15 +14,15 @@ func instance_word(value : Variant)-> void:
 	var new_word : Word = WORD.instantiate()
 	words.append(new_word)
 	new_word.word = value
-	words.find(value)
 	new_word.name = new_word.word
 	new_word.global_position = get_random_pos()
 	
 	add_child(new_word)
+	GameManager.scene_manager.update_popup(new_word)
 
 func get_random_pos() -> Vector2:
 	var padding : float = 10
-	var random_x : float = randf_range(global_position.x + padding, rectangle.size.x + global_position.x - padding)
-	var random_y : float = randf_range(global_position.y - padding, rectangle.size.y + global_position.y + padding)
+	var random_x : float = randf_range(global_position.x + padding, rectangle.size.x + global_position.x - padding) * 0.25
+	var random_y : float = randf_range(global_position.y - padding, rectangle.size.y + global_position.y + padding) * 0.25
 	
 	return Vector2(random_x, random_y)

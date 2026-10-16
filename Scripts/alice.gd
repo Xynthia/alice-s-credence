@@ -19,7 +19,7 @@ func alice_receiving_question(question : String, action: actions, item : Item) -
 	else:
 		var truthfull_state : thruthfull_states = compair_wonderbar_to_dice_roll()
 		
-		if truthfull_state:
+		if truthfull_state != null:
 			match action:
 				actions.LOOK_AT:
 					talk_about(item.dialogs ,truthfull_state)
@@ -69,9 +69,8 @@ func interact(item : Item, truthfull_state: thruthfull_states) -> void:
 
 
 func talk_about(dialog_array : Array[DialogActivator], truthfull_state: thruthfull_states) -> void:
-	var dialog_activator : DialogActivator  = dialog_array[truthfull_state]
-	CutsceneManager.start_dialog(dialog_activator)
-	
+	CutsceneManager.current_cutscene.dialog_lines.append(dialog_array[truthfull_state].dialog_lines[0])
+	print("test")
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

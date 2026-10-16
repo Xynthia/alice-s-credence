@@ -36,6 +36,7 @@ func _on_button_pressed() -> void:
 	
 	if item:
 		CutsceneManager.start_dialog(next_dialog)
+		await get_tree().create_timer(1).timeout
 		
 		GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
 	else:

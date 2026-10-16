@@ -12,10 +12,6 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func start_dialog(next_dialog : DialogActivator) -> void:
-	if current_cutscene && in_dialog:
-		for lines in current_cutscene.dialog_lines.size() + 1:
-			continue_dialog()
-		
 	if next_dialog:
 		in_dialog = true
 		current_cutscene = next_dialog

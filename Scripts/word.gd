@@ -16,7 +16,7 @@ var word_manager : WordManager
 		if label:
 			set_label(value)
 
-@export var margin_word : int = 10
+@export var margin_word : int = 20
 
 var slot_word : SlotWord
 var other_word : Word
@@ -30,10 +30,12 @@ func visible(value : bool) -> void:
 
 func set_label(new_word : String) -> void:
 	label.text = new_word
+	_on_label_resized()
 
 func _on_label_resized() -> void:
 	if label:
 		var new_size : Vector2 = label.size + (margin_word * Vector2.ONE)
+		
 		rectangle.size = new_size
 		nine_patch_rect.size = new_size
 		nine_patch_rect.position = -new_size / 2

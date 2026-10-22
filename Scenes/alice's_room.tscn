@@ -50,7 +50,7 @@ size = Vector2(201.735, 236.125)
 
 [node name="BG" type="Sprite2D" parent="." unique_id=1556364825]
 position = Vector2(580.5034, 323.99997)
-scale = Vector2(0.41322312, 0.41322312)
+scale = Vector2(0.37, 0.37)
 texture = ExtResource("1_hi0fx")
 
 [node name="Alice" parent="." unique_id=75483037 instance=ExtResource("2_tib3v")]

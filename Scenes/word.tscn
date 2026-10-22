@@ -3,14 +3,13 @@
 [ext_resource type="Script" uid="uid://bhi5yatpjd06y" path="res://Scripts/word.gd" id="1_eb40e"]
 [ext_resource type="Script" uid="uid://crmnw3ldr3xev" path="res://addons/drag_and_drop/scripts/draggable.gd" id="2_yt6yk"]
 [ext_resource type="Script" uid="uid://djdmnemxrx7bg" path="res://addons/drag_and_drop/resources/draggable_types/draggable_type.gd" id="3_pq25i"]
+[ext_resource type="Texture2D" uid="uid://do12u26ar2dr5" path="res://assets/Fantasy UI Borders/PNG/Default/Transparent center/panel-transparent-center-008.png" id="4_pq25i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_24de5"]
 resource_local_to_scene = true
 
 [sub_resource type="Resource" id="Resource_yt6yk"]
 script = ExtResource("3_pq25i")
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yuwuw"]
 
 [node name="Word" type="Area2D" unique_id=601017787]
 z_index = 99
@@ -46,6 +45,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_yuwuw")
+texture = ExtResource("4_pq25i")
 
 [connection signal="resized" from="Label" to="." method="_on_label_resized"]

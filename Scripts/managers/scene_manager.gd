@@ -8,7 +8,8 @@ extends Node
 @onready var camera_2d: Camera2D = $World2D/Camera2D
 @onready var alice_room_timer: Timer = $World2D/AliceRoomTimer
 
-@onready var question: Question = $World2D/Question
+@onready var question: Question = $World2D/Node2D/Question
+
 
 @onready var popup: Control = $UI/popup
 @onready var popup_panel: Panel = $UI/popup/popupPanel
@@ -20,7 +21,7 @@ const white : Color = Color.WHITE
 
 const zoom_camera : Vector2 = Vector2(3.0, 3.0)
 const normal_camera : Vector2 = Vector2(1.0, 1.0)
-const zoom_pos_camera : Vector2 = Vector2(632.0, 272.0) 
+const zoom_pos_camera : Vector2 = Vector2(614.39, 219.225) 
 const normal_pos_camera : Vector2 = Vector2(576.0, 320.0)
 
 enum rooms {warrens_room, alice_room}

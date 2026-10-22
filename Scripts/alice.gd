@@ -69,8 +69,8 @@ func interact(item : Item, truthfull_state: thruthfull_states) -> void:
 
 
 func talk_about(dialog_array : Array[DialogActivator], truthfull_state: thruthfull_states) -> void:
-	CutsceneManager.current_cutscene.dialog_lines.append(dialog_array[truthfull_state].dialog_lines[0])
-	print("test")
+	if dialog_array[truthfull_state]:
+		CutsceneManager.current_cutscene.dialog_lines.append(dialog_array[truthfull_state].dialog_lines[0])
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

@@ -35,10 +35,10 @@ dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_sym2d"), Sub
 metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuwuw"]
-size = Vector2(196, 214.36)
+size = Vector2(229, 214.36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obnnr"]
-size = Vector2(93, 214)
+size = Vector2(75, 214)
 
 [node name="SceneManager" type="Node" unique_id=377594497]
 script = ExtResource("1_vbxak")
@@ -52,39 +52,42 @@ script = ExtResource("1_aq7jj")
 [node name="Camera2D" type="Camera2D" parent="World2D" unique_id=1254064917]
 position = Vector2(576, 320)
 
-[node name="ScreenArea2D" type="Area2D" parent="World2D" unique_id=1130765858]
-position = Vector2(632, 272)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/ScreenArea2D" unique_id=134421255]
-position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_yuwuw")
-
-[node name="OutsideScreenAreas" type="Node2D" parent="World2D" unique_id=1159978626]
-
-[node name="OutsideScreenArea" type="Area2D" parent="World2D/OutsideScreenAreas" unique_id=480506268]
-position = Vector2(448, 272)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/OutsideScreenAreas/OutsideScreenArea" unique_id=1366732924]
-position = Vector2(39.5, 0)
-shape = SubResource("RectangleShape2D_obnnr")
-
-[node name="OutsideScreenArea2" type="Area2D" parent="World2D/OutsideScreenAreas" unique_id=2067253190]
-position = Vector2(739, 272)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/OutsideScreenAreas/OutsideScreenArea2" unique_id=188331848]
-position = Vector2(39.5, 0)
-shape = SubResource("RectangleShape2D_obnnr")
-
-[node name="Alice\'s Room" parent="World2D" unique_id=347352623 instance=ExtResource("9_424ls")]
-position = Vector2(488.00003, 184)
-scale = Vector2(0.25, 0.25)
-
 [node name="AliceRoomTimer" type="Timer" parent="World2D" unique_id=1747649767]
 wait_time = 1.1
 
 [node name="Warren" parent="World2D" unique_id=115603645 instance=ExtResource("10_aq7jj")]
 
-[node name="Question" parent="World2D" unique_id=1364450598 instance=ExtResource("12_ccwmf")]
+[node name="Node2D" type="Node2D" parent="World2D" unique_id=1090390572]
+position = Vector2(-17, -53)
+
+[node name="ScreenArea2D" type="Area2D" parent="World2D/Node2D" unique_id=1130765858]
+position = Vector2(632, 272)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/Node2D/ScreenArea2D" unique_id=134421255]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_yuwuw")
+
+[node name="OutsideScreenAreas" type="Node2D" parent="World2D/Node2D" unique_id=1159978626]
+
+[node name="OutsideScreenArea" type="Area2D" parent="World2D/Node2D/OutsideScreenAreas" unique_id=480506268]
+position = Vector2(448, 272)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea" unique_id=1366732924]
+position = Vector2(30.5, 0)
+shape = SubResource("RectangleShape2D_obnnr")
+
+[node name="OutsideScreenArea2" type="Area2D" parent="World2D/Node2D/OutsideScreenAreas" unique_id=2067253190]
+position = Vector2(739, 272)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea2" unique_id=188331848]
+position = Vector2(45.5, 0)
+shape = SubResource("RectangleShape2D_obnnr")
+
+[node name="Alice\'s Room" parent="World2D/Node2D" unique_id=347352623 instance=ExtResource("9_424ls")]
+position = Vector2(488.00003, 184)
+scale = Vector2(0.25, 0.25)
+
+[node name="Question" parent="World2D/Node2D" unique_id=1364450598 instance=ExtResource("12_ccwmf")]
 visible = false
 position = Vector2(496, 184)
 scale = Vector2(0.25, 0.25)
@@ -136,7 +139,7 @@ text = "has been added!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="input_event" from="World2D/ScreenArea2D" to="." method="_on_screen_area_2d_input_event"]
-[connection signal="input_event" from="World2D/OutsideScreenAreas/OutsideScreenArea" to="." method="_on_outside_screen_area_input_event"]
-[connection signal="input_event" from="World2D/OutsideScreenAreas/OutsideScreenArea2" to="." method="_on_outside_screen_area_input_event"]
 [connection signal="timeout" from="World2D/AliceRoomTimer" to="." method="_on_alice_room_timer_timeout"]
+[connection signal="input_event" from="World2D/Node2D/ScreenArea2D" to="." method="_on_screen_area_2d_input_event"]
+[connection signal="input_event" from="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea" to="." method="_on_outside_screen_area_input_event"]
+[connection signal="input_event" from="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea2" to="." method="_on_outside_screen_area_input_event"]

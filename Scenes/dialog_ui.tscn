@@ -28,6 +28,7 @@ grow_vertical = 2
 script = ExtResource("1_ys628")
 
 [node name="Portraits" type="Control" parent="." unique_id=566444862]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -191,7 +192,7 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.755)
 offset_transform_enabled = true
 theme_override_font_sizes/normal_font_size = 20
-text = "Lorem ipsum"
+text = "T. Warren"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -264,7 +265,7 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.755)
 offset_transform_enabled = true
 theme_override_font_sizes/normal_font_size = 20
-text = "Lorem ipsum"
+text = "Alice Liddell"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharachterInfo" format=3 uid="uid://dvfvxl3lv3sip"]
+
+[ext_resource type="Script" uid="uid://lfpo1naeky51" path="res://resources/charachter_info.gd" id="1_ar1ux"]
+
+[resource]
+script = ExtResource("1_ar1ux")
+first_name = "Alice"
+last_name = "Liddell"
+age = 10
+metadata/_custom_type_script = "uid://lfpo1naeky51"

@@ -15,6 +15,8 @@ func instance_word(value : Variant)-> void:
 	words.append(new_word)
 	new_word.word = value
 	new_word.name = new_word.word
+	if new_word.word == "clothes":
+		GameManager.item_manager.change_cabinet()
 	new_word.global_position = get_random_pos()
 	
 	add_child(new_word)

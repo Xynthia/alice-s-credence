@@ -7,44 +7,525 @@
 [ext_resource type="Script" uid="uid://c2wmtfnafrvdl" path="res://resources/dialog_line.gd" id="5_20rqy"]
 [ext_resource type="Script" uid="uid://v8q6baj25iv2" path="res://resources/expression_charachters.gd" id="6_ybqny"]
 [ext_resource type="Script" uid="uid://bslh1h6kilg2j" path="res://resources/move_charachter.gd" id="7_bh3ae"]
+[ext_resource type="Resource" uid="uid://dvfvxl3lv3sip" path="res://resources/charachter info/Alice.tres" id="8_ybqny"]
 [ext_resource type="Script" uid="uid://hvdj3dvv56ce" path="res://resources/dialog_activator.gd" id="8_ytjoy"]
 [ext_resource type="Script" uid="uid://dsxdcmd01630g" path="res://Scripts/managers/item_manager.gd" id="9_20rqy"]
 
-[sub_resource type="Resource" id="Resource_8kog0"]
+[sub_resource type="Resource" id="Resource_ybqny"]
 script = ExtResource("5_20rqy")
-text = "1"
+text = "It's a box, maybe I should open it..."
+in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
-[sub_resource type="Resource" id="Resource_tib3v"]
+[sub_resource type="Resource" id="Resource_ntbrc"]
 script = ExtResource("8_ytjoy")
-dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_8kog0")])
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_ybqny")])
 metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
-[sub_resource type="Resource" id="Resource_4vr70"]
+[sub_resource type="Resource" id="Resource_bh3ae"]
 script = ExtResource("5_20rqy")
-text = "0"
+text = "It's a box, maybe I should open it..."
+in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
-[sub_resource type="Resource" id="Resource_hbesd"]
+[sub_resource type="Resource" id="Resource_p4ta5"]
 script = ExtResource("8_ytjoy")
-dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_4vr70")])
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_bh3ae")])
 metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
-[sub_resource type="Resource" id="Resource_q0hro"]
+[sub_resource type="Resource" id="Resource_ytjoy"]
 script = ExtResource("5_20rqy")
-text = "-1"
+text = "It's a box, maybe I should open it..."
+in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
-[sub_resource type="Resource" id="Resource_xvbaa"]
+[sub_resource type="Resource" id="Resource_37i2y"]
 script = ExtResource("8_ytjoy")
-dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_q0hro")])
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_ytjoy")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_7jo76"]
+script = ExtResource("5_20rqy")
+text = "There is a police badge!"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_sax53"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_7jo76")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_rnmqn"]
+script = ExtResource("5_20rqy")
+text = "There is a police badge!"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_gl2bw"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_rnmqn")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_o7236"]
+script = ExtResource("5_20rqy")
+text = "There is a police badge!"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_dwv5b"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_o7236")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_f85ha"]
+script = ExtResource("5_20rqy")
+text = "Its an old picture of a young boy. On the back there are the initials T.W."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_nm8n4"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_f85ha")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_jec5l"]
+script = ExtResource("5_20rqy")
+text = "It's an old picture of a young boy."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_3n77e"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_jec5l")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_ynao2"]
+script = ExtResource("5_20rqy")
+text = "It's an old picture."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_aowii"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_ynao2")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_n5xuo"]
+script = ExtResource("5_20rqy")
+text = "It has a picture of a boy! It seems to be a kidnapping case file?"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_iartx"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_n5xuo")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_i7kxi"]
+script = ExtResource("5_20rqy")
+text = "It's some information about a boy..."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_plpbi"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_i7kxi")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_x65nn"]
+script = ExtResource("5_20rqy")
+text = "It just has difficult words."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_2eom3"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_x65nn")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_7cmj3"]
+script = ExtResource("5_20rqy")
+text = "Well taken care of shoes, they are old and a bit to big for me. "
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_v6b4p"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_7cmj3")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_ejvdw"]
+script = ExtResource("5_20rqy")
+text = "Old shoes, bigger then my size."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_0lihh"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_ejvdw")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_j03iy"]
+script = ExtResource("5_20rqy")
+text = "blegh."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_d4h41"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_j03iy")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_qy54l"]
+script = ExtResource("5_20rqy")
+text = "They are are well taken care of but old boy clothes."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_2wb5x"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_qy54l")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_2un1d"]
+script = ExtResource("5_20rqy")
+text = "They're old boy clothes."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_0ujkj"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_2un1d")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_ca12b"]
+script = ExtResource("5_20rqy")
+text = "My nanny would never leave such old clothes behind."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_mc7ig"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_ca12b")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_gdfnv"]
+script = ExtResource("5_20rqy")
+text = "It's a badge of Detective T. Warren.... Why is it here?"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_ou04o"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_gdfnv")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_3uwlx"]
+script = ExtResource("5_20rqy")
+text = "It's a detective badge"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_hhbm0"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_3uwlx")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_6o244"]
+script = ExtResource("5_20rqy")
+text = "... There is no name on this detective badge."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_xjhf0"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_6o244")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_6k1x8"]
+script = ExtResource("5_20rqy")
+text = "There's a box underneath the bed!"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_mddqg"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_6k1x8")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_5oce2"]
+script = ExtResource("5_20rqy")
+text = "There is something under the bed..."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_0vc5j"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_5oce2")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_40ris"]
+script = ExtResource("5_20rqy")
+text = "I wouldn't want to sleep on such a dirty bed."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_10qbe"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_40ris")])
 metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_24de5"]
 size = Vector2(306.45, 210.045)
 
+[sub_resource type="Resource" id="Resource_8oifu"]
+script = ExtResource("5_20rqy")
+text = "It's a leaking pipe.... poor plant."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_mmh6l"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_8oifu")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_1afas"]
+script = ExtResource("5_20rqy")
+text = "It's a leaking pipe.... poor plant."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_225he"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_1afas")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_waw62"]
+script = ExtResource("5_20rqy")
+text = "It's a leaking pipe.... poor plant."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_5bqmg"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_waw62")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0s2g4"]
+size = Vector2(98.06995, 37.930054)
+
+[sub_resource type="Resource" id="Resource_smfpw"]
+script = ExtResource("5_20rqy")
+text = "It's a calander. From four years ago?"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_j4n0t"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_smfpw")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_6y4t5"]
+script = ExtResource("5_20rqy")
+text = "It's a calander. From four years ago?"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_xe6we"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_6y4t5")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_nvbpf"]
+script = ExtResource("5_20rqy")
+text = "It's a calander. From four years ago?"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_nx0xy"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_nvbpf")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytjoy"]
+size = Vector2(98.06995, 85.93005)
+
+[sub_resource type="Resource" id="Resource_0s2g4"]
+script = ExtResource("5_20rqy")
+text = "It's a lamp, at least this one isn't broken."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_htprq"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_0s2g4")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_uuob6"]
+script = ExtResource("5_20rqy")
+text = "It's a lamp, at least this one isn't broken."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_w6rpv"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_uuob6")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_iup8k"]
+script = ExtResource("5_20rqy")
+text = "It's a lamp, at least this one isn't broken."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_1qwmp"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_iup8k")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuob6"]
+size = Vector2(161, 79.93005)
+
+[sub_resource type="Resource" id="Resource_q0hhr"]
+script = ExtResource("5_20rqy")
+text = "It's broken..."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_8tth3"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_q0hhr")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_11hch"]
+script = ExtResource("5_20rqy")
+text = "It's broken..."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_oujwt"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_11hch")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_73dt2"]
+script = ExtResource("5_20rqy")
+text = "It's broken..."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_w7e1j"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_73dt2")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_i4x6b"]
+script = ExtResource("5_20rqy")
+text = "The door has a hatch, with the engraving \"What do i want the most?\""
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_bexsf"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_i4x6b")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_extxf"]
+script = ExtResource("5_20rqy")
+text = "The door has a hatch, with the engraving \"What do i want the most?\""
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_mpiwm"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_extxf")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_17gj2"]
+script = ExtResource("5_20rqy")
+text = "The door has a hatch, with the engraving \"What do i want the most?\""
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_xyuft"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_17gj2")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bh3ae"]
+size = Vector2(198.06995, 326.06995)
+
+[sub_resource type="Resource" id="Resource_hr2ps"]
+script = ExtResource("5_20rqy")
+text = "There is a set of kids clothes. It looks old but well taken care of."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_vuth3"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_hr2ps")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_rwto8"]
+script = ExtResource("5_20rqy")
+text = "Old clothes."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_v5qke"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_rwto8")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_xrgd5"]
+script = ExtResource("5_20rqy")
+text = "Our nanny would never leave such dirty clothes in a drawer."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_moe4y"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_xrgd5")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swqr5"]
 size = Vector2(201.735, 236.125)
+
+[sub_resource type="Resource" id="Resource_o8e5x"]
+script = ExtResource("5_20rqy")
+text = "The plant seems to be wilting but there envelope behind the pot!"
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_0ti4j"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_o8e5x")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_sctey"]
+script = ExtResource("5_20rqy")
+text = "It's getting water from the leaking pipe...."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_7xfft"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_sctey")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_2yyl0"]
+script = ExtResource("5_20rqy")
+text = "It's dying and smell bad..."
+in_convo_with = ExtResource("8_ybqny")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_7sucx"]
+script = ExtResource("8_ytjoy")
+dialog_lines = Array[ExtResource("5_20rqy")]([SubResource("Resource_2yyl0")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybqny"]
+size = Vector2(60, 116)
 
 [node name="Alice\'s Room" type="Node2D" unique_id=347352623]
 
@@ -59,17 +540,65 @@ position = Vector2(584, 472)
 [node name="ItemManager" type="Node2D" parent="." unique_id=68480514]
 script = ExtResource("9_20rqy")
 
-[node name="box" type="Node2D" parent="ItemManager" unique_id=1901377699]
+[node name="box" type="Node2D" parent="ItemManager" unique_id=1901377699 node_paths=PackedStringArray("item_to_give")]
 script = ExtResource("3_tib3v")
 own_word_name = "box"
+truthfull_dialog = SubResource("Resource_ntbrc")
+half_truthfull_dialog = SubResource("Resource_p4ta5")
+not_truthfull_dialog = SubResource("Resource_37i2y")
+item_to_give = [NodePath("../shoes")]
+
+[node name="cabinet2" type="Node2D" parent="ItemManager" unique_id=112863480 node_paths=PackedStringArray("item_to_give")]
+script = ExtResource("3_tib3v")
+own_word_name = "cabinet2"
+truthfull_dialog = SubResource("Resource_sax53")
+half_truthfull_dialog = SubResource("Resource_gl2bw")
+not_truthfull_dialog = SubResource("Resource_dwv5b")
+item_to_give = [NodePath("../police badge")]
+
+[node name="picture" type="Node2D" parent="ItemManager" unique_id=1524821545]
+script = ExtResource("3_tib3v")
+own_word_name = "picture"
+truthfull_dialog = SubResource("Resource_nm8n4")
+half_truthfull_dialog = SubResource("Resource_3n77e")
+not_truthfull_dialog = SubResource("Resource_aowii")
+
+[node name="case file" type="Node2D" parent="ItemManager" unique_id=617026952 node_paths=PackedStringArray("item_to_give")]
+script = ExtResource("3_tib3v")
+own_word_name = "case file"
+truthfull_dialog = SubResource("Resource_iartx")
+half_truthfull_dialog = SubResource("Resource_plpbi")
+not_truthfull_dialog = SubResource("Resource_2eom3")
+item_to_give = [NodePath("../picture")]
+
+[node name="shoes" type="Node2D" parent="ItemManager" unique_id=1643726307]
+script = ExtResource("3_tib3v")
+own_word_name = "shoes"
+truthfull_dialog = SubResource("Resource_v6b4p")
+half_truthfull_dialog = SubResource("Resource_0lihh")
+not_truthfull_dialog = SubResource("Resource_d4h41")
+
+[node name="clothes" type="Node2D" parent="ItemManager" unique_id=422675864]
+script = ExtResource("3_tib3v")
+own_word_name = "clothes"
+truthfull_dialog = SubResource("Resource_2wb5x")
+half_truthfull_dialog = SubResource("Resource_0ujkj")
+not_truthfull_dialog = SubResource("Resource_mc7ig")
+
+[node name="police badge" type="Node2D" parent="ItemManager" unique_id=1524528065]
+script = ExtResource("3_tib3v")
+own_word_name = "police badge"
+truthfull_dialog = SubResource("Resource_ou04o")
+half_truthfull_dialog = SubResource("Resource_hhbm0")
+not_truthfull_dialog = SubResource("Resource_xjhf0")
 
 [node name="bed" type="Node2D" parent="ItemManager" unique_id=808575280 node_paths=PackedStringArray("item_to_give")]
 position = Vector2(833.965, 523.965)
 script = ExtResource("3_tib3v")
 own_word_name = "Bed"
-truthfull_dialog = SubResource("Resource_tib3v")
-half_truthfull_dialog = SubResource("Resource_hbesd")
-not_truthfull_dialog = SubResource("Resource_xvbaa")
+truthfull_dialog = SubResource("Resource_mddqg")
+half_truthfull_dialog = SubResource("Resource_0vc5j")
+not_truthfull_dialog = SubResource("Resource_10qbe")
 item_to_give = [NodePath("../box")]
 
 [node name="Area2D" type="Area2D" parent="ItemManager/bed" unique_id=682066720]
@@ -77,14 +606,109 @@ item_to_give = [NodePath("../box")]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/bed/Area2D" unique_id=2055717480]
 shape = SubResource("RectangleShape2D_24de5")
 
-[node name="Cabinet" type="Node2D" parent="ItemManager" unique_id=1333940507]
+[node name="pipe" type="Node2D" parent="ItemManager" unique_id=1115235832]
+position = Vector2(345.96503, 110.96503)
+script = ExtResource("3_tib3v")
+own_word_name = "pipe"
+truthfull_dialog = SubResource("Resource_mmh6l")
+half_truthfull_dialog = SubResource("Resource_225he")
+not_truthfull_dialog = SubResource("Resource_5bqmg")
+
+[node name="Area2D" type="Area2D" parent="ItemManager/pipe" unique_id=1560596499]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/pipe/Area2D" unique_id=18782708]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_0s2g4")
+
+[node name="calender" type="Node2D" parent="ItemManager" unique_id=741596108]
+position = Vector2(705.965, 273.96503)
+script = ExtResource("3_tib3v")
+own_word_name = "calender"
+truthfull_dialog = SubResource("Resource_j4n0t")
+half_truthfull_dialog = SubResource("Resource_xe6we")
+not_truthfull_dialog = SubResource("Resource_nx0xy")
+
+[node name="Area2D" type="Area2D" parent="ItemManager/calender" unique_id=1174662631]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/calender/Area2D" unique_id=1295733159]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ytjoy")
+
+[node name="lamp" type="Node2D" parent="ItemManager" unique_id=1999609185]
+position = Vector2(433.96503, 11.965027)
+script = ExtResource("3_tib3v")
+own_word_name = "lamp"
+truthfull_dialog = SubResource("Resource_htprq")
+half_truthfull_dialog = SubResource("Resource_w6rpv")
+not_truthfull_dialog = SubResource("Resource_1qwmp")
+
+[node name="Area2D" type="Area2D" parent="ItemManager/lamp" unique_id=380998681]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/lamp/Area2D" unique_id=1933100998]
+position = Vector2(-0.46502686, 0)
+shape = SubResource("RectangleShape2D_uuob6")
+
+[node name="broken lamp" type="Node2D" parent="ItemManager" unique_id=1220911708]
+position = Vector2(705.965, 123.96503)
+script = ExtResource("3_tib3v")
+own_word_name = "broken lamp"
+truthfull_dialog = SubResource("Resource_8tth3")
+half_truthfull_dialog = SubResource("Resource_oujwt")
+not_truthfull_dialog = SubResource("Resource_w7e1j")
+
+[node name="Area2D" type="Area2D" parent="ItemManager/broken lamp" unique_id=248833167]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/broken lamp/Area2D" unique_id=1946351509]
+position = Vector2(89.53497, -116)
+shape = SubResource("RectangleShape2D_uuob6")
+
+[node name="door" type="Node2D" parent="ItemManager" unique_id=871286214]
+position = Vector2(497.96503, 339.96503)
+script = ExtResource("3_tib3v")
+own_word_name = "door"
+truthfull_dialog = SubResource("Resource_bexsf")
+half_truthfull_dialog = SubResource("Resource_mpiwm")
+not_truthfull_dialog = SubResource("Resource_xyuft")
+
+[node name="Area2D" type="Area2D" parent="ItemManager/door" unique_id=2068430409]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/door/Area2D" unique_id=1979324568]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_bh3ae")
+
+[node name="cabinet" type="Node2D" parent="ItemManager" unique_id=1333940507 node_paths=PackedStringArray("item_to_give")]
 position = Vector2(259, 519)
 script = ExtResource("3_tib3v")
-own_word_name = "Cabinet"
+own_word_name = "cabinet"
+truthfull_dialog = SubResource("Resource_vuth3")
+half_truthfull_dialog = SubResource("Resource_v5qke")
+not_truthfull_dialog = SubResource("Resource_moe4y")
+item_to_give = [NodePath("../clothes")]
 
-[node name="Area2D" type="Area2D" parent="ItemManager/Cabinet" unique_id=1214430649]
+[node name="Area2D" type="Area2D" parent="ItemManager/cabinet" unique_id=1214430649]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/Cabinet/Area2D" unique_id=1873093859]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/cabinet/Area2D" unique_id=1873093859]
 shape = SubResource("RectangleShape2D_swqr5")
 
+[node name="plant" type="Node2D" parent="ItemManager" unique_id=1649698346 node_paths=PackedStringArray("item_to_give")]
+position = Vector2(379, 487)
+script = ExtResource("3_tib3v")
+own_word_name = "plant"
+truthfull_dialog = SubResource("Resource_0ti4j")
+half_truthfull_dialog = SubResource("Resource_7xfft")
+not_truthfull_dialog = SubResource("Resource_7sucx")
+item_to_give = [NodePath("../case file")]
+
+[node name="Area2D" type="Area2D" parent="ItemManager/plant" unique_id=797117806]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemManager/plant/Area2D" unique_id=1117474265]
+position = Vector2(3, -7)
+shape = SubResource("RectangleShape2D_ybqny")
+
 [connection signal="input_event" from="ItemManager/bed/Area2D" to="ItemManager/bed" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ItemManager/pipe/Area2D" to="ItemManager/pipe" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ItemManager/calender/Area2D" to="ItemManager/calender" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ItemManager/lamp/Area2D" to="ItemManager/lamp" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ItemManager/broken lamp/Area2D" to="ItemManager/broken lamp" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ItemManager/door/Area2D" to="ItemManager/door" method="_on_area_2d_input_event"]

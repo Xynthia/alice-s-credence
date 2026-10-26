@@ -40,9 +40,6 @@ var zooming : bool = false
 func _ready() -> void:
 	GameManager.scene_manager = self
 	#start_intro()
-	pass
-
-
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("draggable_click"):

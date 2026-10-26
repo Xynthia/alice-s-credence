@@ -9,6 +9,8 @@ const SLOT_WORD = preload("uid://b85g32gol80go")
 @onready var option_button: OptionButton = $"Control/question ui/OptionButton"
 
 var newest_slot_word : SlotWord 
+var question_ui : bool = true
+var door_ui : bool = false
 
 func _ready() -> void:
 	slot_word.question_ui = self
@@ -26,22 +28,26 @@ func create_slot_word() -> void:
 
 func _on_button_pressed() -> void:
 	if slot_word.word:
-		var question_string : String = "Alice can you " + str(option_button.get_item_text(option_button.selected)) + " " + str(slot_word.word.word) +"?"
-		var item : Item = GameManager.item_manager.find_word(slot_word.word)
-		
-		var next_dialog : DialogActivator = DialogActivator.new()
-		var next_line : DialogLine = DialogLine.new()
-		next_line.text = question_string
-		
-		next_dialog.dialog_lines.append(next_line)
-		
-		if item:
-			CutsceneManager.start_dialog(next_dialog)
-			await get_tree().create_timer(1).timeout
+		if question_ui:
+			var question_string : String = "Alice can you " + str(option_button.get_item_text(option_button.selected)) + " " + str(slot_word.word.word) +"?"
+			var item : Item = GameManager.item_manager.find_word(slot_word.word)
 			
-			GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
-		else:
-			print("no item found")
+			var next_dialog : DialogActivator = DialogActivator.new()
+			var next_line : DialogLine = DialogLine.new()
+		
+			
+			if item:
+				next_line.text = question_string
+				next_dialog.dialog_lines.append(next_line)
+				
+				CutsceneManager.start_dialog(next_dialog)
+				await GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
+			else:
+				print("no item found")
+		if door_ui:
+			var item : Item = GameManager.item_manager.find_word(slot_word.word)
+			if item == GameManager.item_manager.picture:
+				GameManager.end_game(true)
 
 
 func _on_return_button_pressed() -> void:

@@ -61,6 +61,12 @@ func change_dialog_text(new_text : String)-> void:
 	await tween.finished
 	showing_full_line_text = true
 
+func show_name_box_left(value : bool) -> void:
+	name_box_left.visible = value
+
+func show_name_box_right(value : bool) -> void:
+	name_box_right.visible = value
+
 func change_name_box_left(new_text : String) -> void:
 	name_box_left_label.text = new_text
 

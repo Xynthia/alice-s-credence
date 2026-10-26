@@ -94,6 +94,43 @@ layout_mode = 2
 mouse_behavior_recursive = 2
 text = "SUBMIT"
 
+[node name="door ui" type="HBoxContainer" parent="Control" unique_id=1477623505]
+visible = false
+layout_mode = 0
+offset_left = 376.0
+offset_top = 464.0
+offset_right = 829.0
+offset_bottom = 504.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/door ui" unique_id=805247703]
+custom_minimum_size = Vector2(202.41, 0)
+layout_mode = 2
+text = "What do i want the most?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/door ui" unique_id=1538868617]
+custom_minimum_size = Vector2(161.56, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Panel" type="Panel" parent="Control/door ui/Control" unique_id=1902316751]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="Button" type="Button" parent="Control/door ui" unique_id=997914448]
+layout_mode = 2
+mouse_behavior_recursive = 2
+text = "SUBMIT"
+
 [node name="Panel" type="Panel" parent="Control" unique_id=1673204834]
 self_modulate = Color(1, 1, 1, 0.46666667)
 layout_mode = 1
@@ -126,3 +163,4 @@ position = Vector2(664, 486)
 
 [connection signal="pressed" from="Control/ReturnButton" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="Control/question ui/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/door ui/Button" to="." method="_on_button_pressed"]

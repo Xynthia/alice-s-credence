@@ -4,11 +4,20 @@ extends Node2D
 var items : Array[Item]
 
 @onready var bed: Item = $bed
-@onready var cabinet: Item = $Cabinet
+@onready var cabinet: Item = $cabinet
 @onready var door: Item = $door
 @onready var plant: Item = $plant
 @onready var cabinet_2: Item = $cabinet2
 @onready var picture: Item = $picture
+@onready var box: Item = $box
+@onready var case_file: Item = $"case file"
+@onready var shoes: Item = $shoes
+@onready var clothes: Item = $clothes
+@onready var police_badge: Item = $"police badge"
+@onready var pipe: Item = $pipe
+@onready var calender: Item = $calender
+@onready var lamp: Item = $lamp
+@onready var broken_lamp: Item = $"broken lamp"
 
 var has_clothes : bool = false
 

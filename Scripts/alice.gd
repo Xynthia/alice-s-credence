@@ -1,12 +1,12 @@
 class_name Alice
 extends Node2D
 
+const ALICE = preload("uid://dvfvxl3lv3sip")
+
 enum actions {LOOK_AT, USE, WALK_TO}
 enum thruthfull_states {THRUTHFULLY, HALF_TRUTHFULLY, NOT_TRUTHFULLY}
 
 @onready var wonderbar: Wonderbar = $Wonderbar
-
-
 
 var last_question_asked : String = "test"
 
@@ -23,25 +23,21 @@ func alice_receiving_question(question : String, action: actions, item : Item) -
 		if truthfull_state != null:
 			match action:
 				actions.LOOK_AT:
-					await talk_about(item.dialogs ,truthfull_state)
+					talk_about(item.dialogs ,truthfull_state)
+					item.has_been_looked_at = true
 					return true
 				actions.USE:
-					if item == GameManager.item_manager.bed || item == GameManager.item_manager.cabinet || item == GameManager.item_manager.plant:
+					if item == GameManager.item_manager.bed || item == GameManager.item_manager.cabinet || item == GameManager.item_manager.plant || item == GameManager.item_manager.door:
 						move(item.global_position, truthfull_state)
-					if item == GameManager.item_manager.door:
-						move(item.global_position, truthfull_state)
-						
-					await interact(item,  truthfull_state)
+					interact(item,  truthfull_state)
 					return true
 				actions.WALK_TO:
-					await move(item.global_position, truthfull_state)
+					move(item.global_position, truthfull_state)
 					return true
 			return false
 		else:
 			print("something going wrong")
 			return false
-		
-	
 	last_question_asked = question
 
 func roll_dice() -> int:
@@ -63,29 +59,47 @@ func compair_wonderbar_to_dice_roll() -> thruthfull_states:
 	print(truthfull_state)
 	return truthfull_state
 
-
-func move(new_pos: Vector2, truthfull_state: thruthfull_states) -> bool:
+func move(new_pos: Vector2, truthfull_state: thruthfull_states) -> void:
 	var tween : Tween = create_tween()
 	
 	tween.tween_property(self, "global_position", new_pos, 1)
 	await tween.finished
-	return true
 
-func interact(item : Item, truthfull_state: thruthfull_states) -> bool:
+func interact(item : Item, truthfull_state: thruthfull_states) -> void:
+	if item == GameManager.item_manager.door:
+		talk_about(item.dialogs, truthfull_state)
+		GameManager.scene_manager.open_door_screen()
+		return
+	
+	if item == GameManager.item_manager.plant && !item.has_been_looked_at || item == GameManager.item_manager.bed && !item.has_been_looked_at:
+		var new_dialog_line : DialogLine = DialogLine.new()
+		new_dialog_line.text = "I don't understand how you want me to use this... maybe we should look at it first?"
+		new_dialog_line.in_convo_with = ALICE
+		CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
+		return
+	
+	if item == GameManager.item_manager.clothes || item == GameManager.item_manager.police_badge || item == GameManager.item_manager.picture || item == GameManager.item_manager.calender || item == GameManager.item_manager.pipe || item == GameManager.item_manager.lamp || item == GameManager.item_manager.broken_lamp || item == GameManager.item_manager.shoes:
+		var new_dialog_line : DialogLine = DialogLine.new()
+		new_dialog_line.text = "I can't really use this, if i look at it i might find more info."
+		new_dialog_line.in_convo_with = ALICE
+		CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
+		return
+	
+	if item == GameManager.item_manager.plant && item.item_to_give.size() > 0 && truthfull_state == thruthfull_states.NOT_TRUTHFULLY || item == GameManager.item_manager.bed && item.item_to_give.size() > 0 && truthfull_state == thruthfull_states.NOT_TRUTHFULLY:
+		return
+	
+	if item == GameManager.item_manager.cabinet || item == GameManager.item_manager.case_file || item == GameManager.item_manager.box:
+		talk_about(item.dialogs, truthfull_state)
+	
 	if item.item_to_give.size() > 0:
 		var next_item : Item = item.item_to_give[0]
-		
 		var check_excistance = next_item.check_if_word_excists()
 		if check_excistance == false:
 			GameManager.word_manager.instance_word(next_item.own_word_name)
-	return true
 
-
-func talk_about(dialog_array : Array[DialogActivator], truthfull_state: thruthfull_states) -> bool:
+func talk_about(dialog_array : Array[DialogActivator], truthfull_state: thruthfull_states) -> void:
 	if dialog_array[truthfull_state]:
 		CutsceneManager.current_cutscene.dialog_lines.append(dialog_array[truthfull_state].dialog_lines[0])
-	return true
-
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action("draggable_click") && GameManager.scene_manager.room_state == GameManager.scene_manager.rooms.alice_room:

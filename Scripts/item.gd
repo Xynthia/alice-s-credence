@@ -11,6 +11,8 @@ var item_manager : ItemManager
 
 @export var item_to_give : Array[Item]
 
+var has_been_looked_at : bool = false
+
 var dialogs : Array[DialogActivator] 
 
 # Called when the node enters the scene tree for the first time.

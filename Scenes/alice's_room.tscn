@@ -13,7 +13,7 @@
 
 [sub_resource type="Resource" id="Resource_ybqny"]
 script = ExtResource("5_20rqy")
-text = "It's a box, maybe I should open it..."
+text = "It's a box, I should open it..."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_bh3ae"]
 script = ExtResource("5_20rqy")
-text = "It's a box, maybe I should open it..."
+text = "It's a box, I should open it..."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -35,7 +35,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_ytjoy"]
 script = ExtResource("5_20rqy")
-text = "It's a box, maybe I should open it..."
+text = "It's a box, I should open it..."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 

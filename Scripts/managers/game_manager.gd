@@ -55,8 +55,38 @@ func show_time(hours_left : int) -> void:
 
 func end_game(good_ending : bool) -> void:
 	if good_ending:
-		print("good ending")
+		show_good_end()
 	else:
-		print("times up")
+		show_bad_end()
 		
 	started_end_game = true
+
+func show_good_end() -> void:
+	get_tree().paused = true
+	await scene_manager.fade_in()
+	
+	var text = "The kidnapper let the authorities know the location of alice. They were able to save her."
+	
+	scene_manager.hours_label.text = text
+	scene_manager.hours_label.visible = true
+	await get_tree().create_timer(12).timeout
+	scene_manager.hours_label.visible = false
+	scene_manager.turn_on_main_menu()
+	await scene_manager.fade_out()
+	get_tree().paused = false
+	started_game = false
+
+func show_bad_end() -> void:
+	get_tree().paused = true
+	await scene_manager.fade_in()
+	
+	var text = "you got arrested. \nYou have too much evidence against you. \nYou were sentenced guilty to the kidnapping of alice."
+	
+	scene_manager.hours_label.text = text
+	scene_manager.hours_label.visible = true
+	await get_tree().create_timer(12).timeout
+	scene_manager.hours_label.visible = false
+	scene_manager.turn_on_main_menu()
+	await scene_manager.fade_out()
+	get_tree().paused = false 
+	started_game = false

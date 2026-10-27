@@ -49,11 +49,13 @@ var clicked_on_pc: bool = false
 var fading : bool = false
 var zooming : bool = false
 
+var question_ui : bool = true
+var door_ui : bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameManager.scene_manager = self
-	camera_2d.zoom = zoom_intro_camera
-	camera_2d.global_position = zoom_intro_pos_camera
+	turn_on_main_menu()
 	start_intro()
 
 
@@ -132,11 +134,28 @@ func _on_alice_room_timer_timeout() -> void:
 
 func open_question_screen() -> void:
 	question.visible = true
+	question.door_ui.visible = false
+	question.question_ui.visible = true
 	in_question = true
+	question_ui = true
+	door_ui = false
+
+func open_door_screen() -> void:
+	question.visible = true
+	question.door_ui.visible = true
+	question.question_ui.visible = false
+	in_question = true
+	in_question = false
+	door_ui = true
 
 func close_question_screen() -> void:
 	question.visible = false
+	question.door_ui.visible = false
+	question.question_ui.visible = false
 	in_question = false
+	question_ui = true
+	door_ui = false
+	
 
 func fade_in_popup() -> void:
 	popup.modulate = transparent
@@ -178,6 +197,11 @@ func turn_off_main_menu() -> void:
 	camera_2d.zoom = normal_camera
 	camera_2d.global_position = normal_pos_camera
 	fade_out()
+
+func turn_on_main_menu() -> void:
+	main_menu.visible = true
+	camera_2d.zoom = zoom_intro_camera
+	camera_2d.global_position = zoom_intro_pos_camera
 
 func start_alice_on_screen_dialog() -> void:
 	await open_screen()

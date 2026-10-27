@@ -72,7 +72,7 @@ func move(new_pos: Vector2, truthfull_state: thruthfull_states) -> bool:
 	return true
 
 func interact(item : Item, truthfull_state: thruthfull_states) -> bool:
-	if item.item_to_give.size() > 0 && truthfull_state == thruthfull_states.THRUTHFULLY:
+	if item.item_to_give.size() > 0:
 		var next_item : Item = item.item_to_give[0]
 		
 		var check_excistance = next_item.check_if_word_excists()

@@ -9,8 +9,10 @@
 [ext_resource type="Script" uid="uid://v8q6baj25iv2" path="res://resources/expression_charachters.gd" id="4_hhobr"]
 [ext_resource type="Script" uid="uid://bslh1h6kilg2j" path="res://resources/move_charachter.gd" id="5_wofdf"]
 [ext_resource type="Script" uid="uid://hvdj3dvv56ce" path="res://resources/dialog_activator.gd" id="6_kad1h"]
+[ext_resource type="Texture2D" uid="uid://bbljt86wshg4j" path="res://assets/placeholders/main menu.jpg" id="8_vbxak"]
 [ext_resource type="PackedScene" uid="uid://dn8q6nuhyeo08" path="res://Scenes/alice's_room.tscn" id="9_424ls"]
 [ext_resource type="PackedScene" uid="uid://dpobaxn258lo0" path="res://Scenes/warren.tscn" id="10_aq7jj"]
+[ext_resource type="Texture2D" uid="uid://c48ujgrlhktr8" path="res://assets/TV_blip.png" id="10_vbxak"]
 [ext_resource type="PackedScene" uid="uid://dvuaf7wbonmsd" path="res://Scenes/question.tscn" id="12_ccwmf"]
 
 [sub_resource type="Resource" id="Resource_sym2d"]
@@ -29,10 +31,236 @@ text = "The police don't have much money.
 so this was already a lot."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
+[sub_resource type="Resource" id="Resource_vbxak"]
+script = ExtResource("3_cjhpt")
+text = "..."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_wfdn8"]
+script = ExtResource("3_cjhpt")
+text = "Wait. What is this?"
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_ldpl7"]
+script = ExtResource("3_cjhpt")
+text = "A letter with my name and a cd, with play me written on it. "
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_l5ho0"]
+script = ExtResource("3_cjhpt")
+text = "Who's sick joke is this?..."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_mdpuj"]
+script = ExtResource("3_cjhpt")
+text = " maybe it isn't a joke. I should play it."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
 [sub_resource type="Resource" id="Resource_yuwuw"]
 script = ExtResource("6_kad1h")
-dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_sym2d"), SubResource("Resource_jrumy"), SubResource("Resource_xqoe6")])
+dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_sym2d"), SubResource("Resource_jrumy"), SubResource("Resource_xqoe6"), SubResource("Resource_vbxak"), SubResource("Resource_wfdn8"), SubResource("Resource_ldpl7"), SubResource("Resource_l5ho0"), SubResource("Resource_mdpuj")])
 metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_0deay"]
+script = ExtResource("3_cjhpt")
+text = "What... it's started a program."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_ak33y"]
+script = ExtResource("3_cjhpt")
+text = "Is this... Oh No! "
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_4jqp7"]
+script = ExtResource("3_cjhpt")
+text = "It's Alice, the missing kid!"
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_mbuhx"]
+script = ExtResource("3_cjhpt")
+text = "We only have a few hours left before her file gets closed."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_05yv3"]
+script = ExtResource("3_cjhpt")
+text = "Maybe i can talk to her and get some more information about where she is..."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_tn3fl"]
+script = ExtResource("6_kad1h")
+dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_0deay"), SubResource("Resource_ak33y"), SubResource("Resource_4jqp7"), SubResource("Resource_mbuhx"), SubResource("Resource_05yv3")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqfin"]
+size = Vector2(130, 105.76807)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbxak"]
+size = Vector2(38, 39.999756)
+
+[sub_resource type="Animation" id="Animation_sym2d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.2517361, 0.25308642)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 1154.3195, 658.5467)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jrumy"]
+resource_name = "close screen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.252, 0.506), Vector2(0.2517361, 0.25308642), Vector2(0.124, 0.253)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.18, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 172.46545, 1154.3195, 313.61578), Rect2(0, 151.96805, 1154.3195, 354.6106), Rect2(0, 97.94574, 1154.3195, 462.6552), Rect2(0, 0, 1154.3195, 658.5467)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_xqoe6"]
+resource_name = "open screen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.124, 0.253), Vector2(0.2517361, 0.25308642), Vector2(0.252, 0.506)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 1154.3195, 658.5467), Rect2(0, 97.94574, 1154.3195, 462.6552), Rect2(0, 151.96805, 1154.3195, 354.6106)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.48797476, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfdn8"]
+_data = {
+&"RESET": SubResource("Animation_sym2d"),
+&"close screen": SubResource("Animation_jrumy"),
+&"open screen": SubResource("Animation_xqoe6")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yuwuw"]
+blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuwuw"]
 size = Vector2(229, 214.36)
@@ -41,11 +269,38 @@ size = Vector2(229, 214.36)
 size = Vector2(75, 214)
 
 [node name="SceneManager" type="Node" unique_id=377594497]
+process_mode = 3
 script = ExtResource("1_vbxak")
 intro_dialog = SubResource("Resource_yuwuw")
+alice_on_screen_dialog = SubResource("Resource_tn3fl")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1824969446]
+process_mode = 1
 script = ExtResource("1_aq7jj")
+
+[node name="main menu" type="Node2D" parent="World2D" unique_id=1387868631]
+z_index = 99
+
+[node name="main menu bg" type="Sprite2D" parent="World2D/main menu" unique_id=1293145411]
+position = Vector2(618.56537, 453.2875)
+rotation = -1.5446163
+scale = Vector2(0.20555957, 0.20555964)
+texture = ExtResource("8_vbxak")
+region_enabled = true
+region_rect = Rect2(184.4209, 947.8401, 1927.1582, 2184.3198)
+
+[node name="StartArea2D" type="Area2D" parent="World2D/main menu" unique_id=294325540]
+position = Vector2(502, 520.9999)
+rotation = -0.4904375
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/main menu/StartArea2D" unique_id=429306373]
+shape = SubResource("RectangleShape2D_aqfin")
+
+[node name="QuitArea2D" type="Area2D" parent="World2D/main menu" unique_id=543728070]
+position = Vector2(718, 408.99988)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/main menu/QuitArea2D" unique_id=1917429483]
+shape = SubResource("RectangleShape2D_vbxak")
 
 [node name="Detective office" parent="World2D" unique_id=1198369454 instance=ExtResource("2_ccwmf")]
 
@@ -55,39 +310,55 @@ position = Vector2(576, 320)
 [node name="AliceRoomTimer" type="Timer" parent="World2D" unique_id=1747649767]
 wait_time = 1.1
 
+[node name="PopupTimer" type="Timer" parent="World2D" unique_id=1547199043]
+
 [node name="Warren" parent="World2D" unique_id=115603645 instance=ExtResource("10_aq7jj")]
 
-[node name="Node2D" type="Node2D" parent="World2D" unique_id=1090390572]
+[node name="scherm" type="Node2D" parent="World2D" unique_id=1090390572]
 position = Vector2(-17, -53)
 
-[node name="ScreenArea2D" type="Area2D" parent="World2D/Node2D" unique_id=1130765858]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="World2D/scherm" unique_id=2123847175]
+libraries/ = SubResource("AnimationLibrary_wfdn8")
+
+[node name="Sprite2D" type="Sprite2D" parent="World2D/scherm" unique_id=174407192]
+visible = false
+z_index = 99
+material = SubResource("CanvasItemMaterial_yuwuw")
+position = Vector2(633, 265)
+scale = Vector2(0.2517361, 0.25308642)
+texture = ExtResource("10_vbxak")
+region_enabled = true
+region_rect = Rect2(0, 0, 1154.3195, 658.5467)
+
+[node name="ScreenArea2D" type="Area2D" parent="World2D/scherm" unique_id=1130765858]
 position = Vector2(632, 272)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/Node2D/ScreenArea2D" unique_id=134421255]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/scherm/ScreenArea2D" unique_id=134421255]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_yuwuw")
 
-[node name="OutsideScreenAreas" type="Node2D" parent="World2D/Node2D" unique_id=1159978626]
+[node name="OutsideScreenAreas" type="Node2D" parent="World2D/scherm" unique_id=1159978626]
 
-[node name="OutsideScreenArea" type="Area2D" parent="World2D/Node2D/OutsideScreenAreas" unique_id=480506268]
+[node name="OutsideScreenArea" type="Area2D" parent="World2D/scherm/OutsideScreenAreas" unique_id=480506268]
 position = Vector2(448, 272)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea" unique_id=1366732924]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/scherm/OutsideScreenAreas/OutsideScreenArea" unique_id=1366732924]
 position = Vector2(30.5, 0)
 shape = SubResource("RectangleShape2D_obnnr")
 
-[node name="OutsideScreenArea2" type="Area2D" parent="World2D/Node2D/OutsideScreenAreas" unique_id=2067253190]
+[node name="OutsideScreenArea2" type="Area2D" parent="World2D/scherm/OutsideScreenAreas" unique_id=2067253190]
 position = Vector2(739, 272)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea2" unique_id=188331848]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World2D/scherm/OutsideScreenAreas/OutsideScreenArea2" unique_id=188331848]
 position = Vector2(45.5, 0)
 shape = SubResource("RectangleShape2D_obnnr")
 
-[node name="Alice\'s Room" parent="World2D/Node2D" unique_id=347352623 instance=ExtResource("9_424ls")]
+[node name="Alice\'s Room" parent="World2D/scherm" unique_id=347352623 instance=ExtResource("9_424ls")]
+visible = false
 position = Vector2(488.00003, 184)
 scale = Vector2(0.25, 0.25)
 
-[node name="Question" parent="World2D/Node2D" unique_id=1364450598 instance=ExtResource("12_ccwmf")]
+[node name="Question" parent="World2D/scherm" unique_id=1364450598 instance=ExtResource("12_ccwmf")]
 visible = false
 position = Vector2(496, 184)
 scale = Vector2(0.25, 0.25)
@@ -95,10 +366,12 @@ scale = Vector2(0.25, 0.25)
 [node name="World3D" type="Node3D" parent="." unique_id=755156172]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=223071471]
+process_mode = 1
 
 [node name="FadeInOutScreen" type="ColorRect" parent="UI" unique_id=655104739]
+process_mode = 3
 visible = false
-z_index = 99
+z_index = 98
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -139,7 +412,30 @@ text = "has been added!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="hoursLabel" type="RichTextLabel" parent="UI" unique_id=766097764]
+process_mode = 3
+visible = false
+z_index = 99
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "hours left"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="World2D/main menu/StartArea2D" to="." method="_on_start_area_2d_input_event"]
+[connection signal="input_event" from="World2D/main menu/QuitArea2D" to="." method="_on_quit_area_2d_input_event"]
 [connection signal="timeout" from="World2D/AliceRoomTimer" to="." method="_on_alice_room_timer_timeout"]
-[connection signal="input_event" from="World2D/Node2D/ScreenArea2D" to="." method="_on_screen_area_2d_input_event"]
-[connection signal="input_event" from="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea" to="." method="_on_outside_screen_area_input_event"]
-[connection signal="input_event" from="World2D/Node2D/OutsideScreenAreas/OutsideScreenArea2" to="." method="_on_outside_screen_area_input_event"]
+[connection signal="timeout" from="World2D/PopupTimer" to="." method="_on_popup_timer_timeout"]
+[connection signal="input_event" from="World2D/scherm/ScreenArea2D" to="." method="_on_screen_area_2d_input_event"]
+[connection signal="input_event" from="World2D/scherm/OutsideScreenAreas/OutsideScreenArea" to="." method="_on_outside_screen_area_input_event"]
+[connection signal="input_event" from="World2D/scherm/OutsideScreenAreas/OutsideScreenArea2" to="." method="_on_outside_screen_area_input_event"]

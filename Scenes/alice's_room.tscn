@@ -712,3 +712,5 @@ shape = SubResource("RectangleShape2D_ybqny")
 [connection signal="input_event" from="ItemManager/lamp/Area2D" to="ItemManager/lamp" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="ItemManager/broken lamp/Area2D" to="ItemManager/broken lamp" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="ItemManager/door/Area2D" to="ItemManager/door" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ItemManager/cabinet/Area2D" to="ItemManager/cabinet" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ItemManager/plant/Area2D" to="ItemManager/plant" method="_on_area_2d_input_event"]

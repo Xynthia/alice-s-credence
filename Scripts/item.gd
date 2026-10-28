@@ -12,6 +12,7 @@ var item_manager : ItemManager
 @export var item_to_give : Array[Item]
 
 var has_been_looked_at : bool = false
+var has_been_given : bool = false
 
 var dialogs : Array[DialogActivator] 
 
@@ -30,7 +31,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		var check_excistance = check_if_word_excists()
 		if check_excistance == false:
 			GameManager.word_manager.instance_word(own_word_name)
-			
+			has_been_given = true
 
 func check_if_word_excists() -> bool:
 	for word in GameManager.word_manager.words:

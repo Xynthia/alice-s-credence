@@ -10,6 +10,11 @@ const WORD = preload("uid://cqk1rjw7rm52g")
 func _ready() -> void:
 	GameManager.word_manager = self
 
+func reset() -> void:
+	for word in words:
+		remove_child(word)
+	words.clear()
+
 func instance_word(value : Variant)-> void:
 	var new_word : Word = WORD.instantiate()
 	words.append(new_word)

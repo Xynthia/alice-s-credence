@@ -54,39 +54,34 @@ func show_time(hours_left : int) -> void:
 	get_tree().paused = false
 
 func end_game(good_ending : bool) -> void:
+	var text : String
 	if good_ending:
-		show_good_end()
+		text = "The kidnapper let the authorities know the location of Alice. They were able to save her.\n ...and you were not found guilty of kindnapping Alice"
 	else:
-		show_bad_end()
+		text = "You got arrested. \nYou have too much evidence against you. \nYou were sentenced guilty to the kidnapping of alice."
 		
 	started_end_game = true
-
-func show_good_end() -> void:
 	get_tree().paused = true
 	await scene_manager.fade_in()
-	
-	var text = "The kidnapper let the authorities know the location of alice. They were able to save her."
-	
 	scene_manager.hours_label.text = text
 	scene_manager.hours_label.visible = true
+	
 	await get_tree().create_timer(12).timeout
+	
 	scene_manager.hours_label.visible = false
-	scene_manager.turn_on_main_menu()
-	await scene_manager.fade_out()
+	
+	scene_manager.question._on_return_button_pressed()
+	item_manager.reset()
+	word_manager.reset()
+	game_timer = 0
 	get_tree().paused = false
-	started_game = false
-
-func show_bad_end() -> void:
-	get_tree().paused = true
-	await scene_manager.fade_in()
-	
-	var text = "you got arrested. \nYou have too much evidence against you. \nYou were sentenced guilty to the kidnapping of alice."
-	
-	scene_manager.hours_label.text = text
-	scene_manager.hours_label.visible = true
-	await get_tree().create_timer(12).timeout
-	scene_manager.hours_label.visible = false
+	scene_manager.room_state = scene_manager.rooms.warrens_room
+	scene_manager.zoom_in_on_alice_first_time = false
 	scene_manager.turn_on_main_menu()
 	await scene_manager.fade_out()
-	get_tree().paused = false 
+	
 	started_game = false
+	started_end_game = false
+	finished_intro = false
+	
+	

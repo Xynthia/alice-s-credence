@@ -3,6 +3,7 @@ extends Node
 
 @export var intro_dialog : DialogActivator
 @export var alice_on_screen_dialog : DialogActivator
+@export var alice_zoomed_in : DialogActivator
 
 @onready var fade_in_out_screen: ColorRect = $UI/FadeInOutScreen
 @onready var screen_area_2d: Area2D = $World2D/scherm/ScreenArea2D
@@ -43,6 +44,7 @@ var pop_time : float = 1
 
 var timer_for_popup : float = 0
 
+var zoom_in_on_alice_first_time : bool = false
 var in_question : bool = false
 var can_interact : bool = false
 var clicked_on_pc: bool = false
@@ -71,6 +73,17 @@ func start_intro() -> void:
 	if !CutsceneManager.in_dialog:
 		CutsceneManager.start_dialog(intro_dialog)
 
+func start_alice_on_screen_dialog() -> void:
+	await open_screen()
+	can_interact = false
+	if !CutsceneManager.in_dialog:
+		CutsceneManager.start_dialog(alice_on_screen_dialog)
+
+func start_intr_part_2() -> void:
+	can_interact = false
+	if !CutsceneManager.in_dialog:
+		CutsceneManager.start_dialog(alice_zoomed_in)
+
 func fade_in() -> void:
 	if !fading:
 		fading = true
@@ -97,6 +110,9 @@ func fade_out() -> void:
 
 func zoom_in() ->void:
 	if !zooming:
+		if !zoom_in_on_alice_first_time:
+			start_intr_part_2()
+			zoom_in_on_alice_first_time = true
 		zooming = true
 		can_interact = false
 		var tween : Tween = create_tween()
@@ -174,11 +190,9 @@ func fade_out_popup() -> void:
 
 func update_popup(word : Word) -> void:
 	popup_rich_text_label.text = word.word + " has been added!"
-	if !popup.visible:
-		await fade_in_popup()
+	await fade_in_popup()
 	
-	if popup_timer.time_left > 0:
-		popup_timer.wait_time = pop_time
+	popup_timer.wait_time = pop_time
 
 func open_screen() -> void:
 	animation_player.play("open screen")
@@ -203,10 +217,7 @@ func turn_on_main_menu() -> void:
 	camera_2d.zoom = zoom_intro_camera
 	camera_2d.global_position = zoom_intro_pos_camera
 
-func start_alice_on_screen_dialog() -> void:
-	await open_screen()
-	if !CutsceneManager.in_dialog:
-		CutsceneManager.start_dialog(alice_on_screen_dialog)
+
 
 func _on_outside_screen_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if can_interact && !in_question && event.is_action("draggable_click"):

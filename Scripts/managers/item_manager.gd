@@ -25,6 +25,12 @@ var has_clothes : bool = false
 func _ready() -> void:
 	GameManager.item_manager = self
 
+func reset() -> void:
+	for child in items:
+		child.has_been_given = false
+		child.has_been_looked_at = false
+		
+
 func find_word(word: Word) -> Item:
 	var item : Item 
 	

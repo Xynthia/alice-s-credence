@@ -97,17 +97,22 @@ text = "SUBMIT"
 [node name="door ui" type="HBoxContainer" parent="Control" unique_id=1477623505]
 visible = false
 layout_mode = 0
-offset_left = 376.0
+offset_left = 337.39
 offset_top = 464.0
-offset_right = 829.0
+offset_right = 816.39
 offset_bottom = 504.0
 mouse_filter = 2
 mouse_behavior_recursive = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/door ui" unique_id=805247703]
-custom_minimum_size = Vector2(202.41, 0)
+custom_minimum_size = Vector2(240.49, 0)
 layout_mode = 2
-text = "What do i want the most?"
+theme_override_colors/default_color = Color(0.90390575, 0.108089305, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "What do I want the most?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -143,14 +148,14 @@ grow_vertical = 2
 mouse_filter = 2
 mouse_behavior_recursive = 1
 
-[node name="Area2D" type="Area2D" parent="." unique_id=612787709]
+[node name="wordmanager" type="Area2D" parent="." unique_id=612787709]
 script = ExtResource("2_hsh21")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=895552145]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wordmanager" unique_id=895552145]
 position = Vector2(575.5, 196)
 shape = SubResource("RectangleShape2D_e2226")
 
-[node name="DropZone" type="Node2D" parent="Area2D" unique_id=2001309452 node_paths=PackedStringArray("attach_spot")]
+[node name="DropZone" type="Node2D" parent="wordmanager" unique_id=2001309452 node_paths=PackedStringArray("attach_spot")]
 script = ExtResource("1_t7qk5")
 attach_spot = NodePath("..")
 drop_behavior = SubResource("Resource_37i2y")

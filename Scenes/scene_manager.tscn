@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://v8q6baj25iv2" path="res://resources/expression_charachters.gd" id="4_hhobr"]
 [ext_resource type="Script" uid="uid://bslh1h6kilg2j" path="res://resources/move_charachter.gd" id="5_wofdf"]
 [ext_resource type="Script" uid="uid://hvdj3dvv56ce" path="res://resources/dialog_activator.gd" id="6_kad1h"]
+[ext_resource type="Resource" uid="uid://dvfvxl3lv3sip" path="res://resources/charachter info/Alice.tres" id="7_sym2d"]
 [ext_resource type="Texture2D" uid="uid://bbljt86wshg4j" path="res://assets/placeholders/main menu.jpg" id="8_vbxak"]
 [ext_resource type="PackedScene" uid="uid://dn8q6nuhyeo08" path="res://Scenes/alice's_room.tscn" id="9_424ls"]
 [ext_resource type="PackedScene" uid="uid://dpobaxn258lo0" path="res://Scenes/warren.tscn" id="10_aq7jj"]
@@ -43,7 +44,7 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_ldpl7"]
 script = ExtResource("3_cjhpt")
-text = "A letter with my name and a cd, with play me written on it. "
+text = "A letter with my name and a CD, with play me written on it. "
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_l5ho0"]
@@ -89,6 +90,70 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 [sub_resource type="Resource" id="Resource_tn3fl"]
 script = ExtResource("6_kad1h")
 dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_0deay"), SubResource("Resource_ak33y"), SubResource("Resource_4jqp7"), SubResource("Resource_mbuhx"), SubResource("Resource_05yv3")])
+metadata/_custom_type_script = "uid://hvdj3dvv56ce"
+
+[sub_resource type="Resource" id="Resource_xcgom"]
+script = ExtResource("3_cjhpt")
+text = "Alice? Alice can you hear me?!"
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_gpsnb"]
+script = ExtResource("3_cjhpt")
+text = "HUH! Who's there! Who are you!"
+in_convo_with = ExtResource("7_sym2d")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_hcq8n"]
+script = ExtResource("3_cjhpt")
+text = "Okay good... Atleast that microphone works."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_metfe"]
+script = ExtResource("3_cjhpt")
+text = "My name is Warren, and i'm a detective working your case."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_vdwm6"]
+script = ExtResource("3_cjhpt")
+text = "A detective? Which district office do you work in?"
+in_convo_with = ExtResource("7_sym2d")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_pgfk7"]
+script = ExtResource("3_cjhpt")
+text = "I'm a detective from the red hearts office, young lady."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_744tr"]
+script = ExtResource("3_cjhpt")
+text = "My parents don't trust the police, after what happend to my sister... why should I trust you?"
+in_convo_with = ExtResource("7_sym2d")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_jotr5"]
+script = ExtResource("3_cjhpt")
+text = "..."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_r5o5v"]
+script = ExtResource("3_cjhpt")
+text = "I'm sorry for what happend to your sister, but i want to make sure that it doesnt happen to you aswell."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_l85vp"]
+script = ExtResource("3_cjhpt")
+text = "So if we work together, we could work out a way to escape. Or maybe even get to know your location."
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_gnukw"]
+script = ExtResource("3_cjhpt")
+text = "Alright... let's try it out..."
+in_convo_with = ExtResource("7_sym2d")
+metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
+
+[sub_resource type="Resource" id="Resource_gghsd"]
+script = ExtResource("6_kad1h")
+dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_xcgom"), SubResource("Resource_gpsnb"), SubResource("Resource_hcq8n"), SubResource("Resource_metfe"), SubResource("Resource_vdwm6"), SubResource("Resource_pgfk7"), SubResource("Resource_744tr"), SubResource("Resource_jotr5"), SubResource("Resource_r5o5v"), SubResource("Resource_l85vp"), SubResource("Resource_gnukw")])
 metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqfin"]
@@ -273,6 +338,7 @@ process_mode = 3
 script = ExtResource("1_vbxak")
 intro_dialog = SubResource("Resource_yuwuw")
 alice_on_screen_dialog = SubResource("Resource_tn3fl")
+alice_zoomed_in = SubResource("Resource_gghsd")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1824969446]
 process_mode = 1
@@ -311,6 +377,7 @@ position = Vector2(576, 320)
 wait_time = 1.1
 
 [node name="PopupTimer" type="Timer" parent="World2D" unique_id=1547199043]
+one_shot = true
 
 [node name="Warren" parent="World2D" unique_id=115603645 instance=ExtResource("10_aq7jj")]
 
@@ -409,6 +476,8 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 text = "has been added!"
+fit_content = true
+scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 

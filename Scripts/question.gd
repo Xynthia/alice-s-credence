@@ -40,7 +40,7 @@ func _on_button_pressed() -> void:
 				next_dialog.dialog_lines.append(next_line)
 				
 				CutsceneManager.start_dialog(next_dialog)
-				await GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
+				GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
 			else:
 				print("no item found")
 		if GameManager.scene_manager.door_ui:

@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bgbtm2rrhjpub" path="res://Scripts/alice.gd" id="1_rhw7d"]
 [ext_resource type="Texture2D" uid="uid://depyxgll125av" path="res://assets/placeholders/alice.jpg" id="2_rhw7d"]
 [ext_resource type="Script" uid="uid://do45pkuuujc8i" path="res://Scripts/wonderbar.gd" id="3_3x3wx"]
+[ext_resource type="Texture2D" uid="uid://csoejdu48lpd3" path="res://assets/emote alice/broken.png" id="4_4hop4"]
+[ext_resource type="Texture2D" uid="uid://hdnvw830q2lt" path="res://assets/emote alice/paint-brush-stroke.png" id="5_i8t6m"]
+[ext_resource type="Texture2D" uid="uid://dkw2d5nuuyd06" path="res://assets/emote alice/star.png" id="6_daqf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuwuw"]
 size = Vector2(122, 163)
@@ -20,5 +23,25 @@ script = ExtResource("3_3x3wx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751381632]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_yuwuw")
+
+[node name="emotes" type="Node2D" parent="." unique_id=1510533134]
+position = Vector2(47.999992, -71.99999)
+scale = Vector2(0.1, 0.1)
+
+[node name="angry" type="Sprite2D" parent="emotes" unique_id=827478677]
+visible = false
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("4_4hop4")
+
+[node name="confused" type="Sprite2D" parent="emotes" unique_id=1636423316]
+visible = false
+modulate = Color(0.34901962, 0, 0.84313726, 1)
+texture = ExtResource("5_i8t6m")
+
+[node name="star" type="Sprite2D" parent="emotes" unique_id=449833134]
+visible = false
+modulate = Color(1, 0.7921569, 0, 1)
+scale = Vector2(3, 3)
+texture = ExtResource("6_daqf8")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

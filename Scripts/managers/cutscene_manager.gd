@@ -38,8 +38,9 @@ func go_to_next_line(next_line_id : int) -> void:
 	
 	if next_line_id > current_cutscene.dialog_lines.size() -1 && dialog_ui.showing_full_line_text:
 		#done with dialog
-		if current_cutscene == GameManager.scene_manager.alice_on_screen_dialog:
+		if current_cutscene == GameManager.scene_manager.alice_zoomed_in:
 			GameManager.finished_intro = true
+		
 		end_dialog()
 		return
 

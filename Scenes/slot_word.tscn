@@ -2,14 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bp4liwo77wmtu" path="res://Scripts/slot_word.gd" id="1_eetlm"]
 [ext_resource type="Script" uid="uid://nj1hdjl1vob2" path="res://addons/drag_and_drop/scripts/drop_zone.gd" id="2_ycpq1"]
-[ext_resource type="Script" uid="uid://b5wqxyc42r5u" path="res://addons/drag_and_drop/resources/drop_behaviors/drop_behavior_reject.gd" id="3_pxfuw"]
+[ext_resource type="Script" uid="uid://deuavk5443jri" path="res://addons/drag_and_drop/resources/drop_behaviors/drop_behavior_rearrange.gd" id="3_ycpq1"]
 [ext_resource type="Script" uid="uid://djdmnemxrx7bg" path="res://addons/drag_and_drop/resources/draggable_types/draggable_type.gd" id="4_g2w03"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycpq1"]
 size = Vector2(160, 38)
 
-[sub_resource type="Resource" id="Resource_ycpq1"]
-script = ExtResource("3_pxfuw")
+[sub_resource type="Resource" id="Resource_g2w03"]
+script = ExtResource("3_ycpq1")
+metadata/_custom_type_script = "uid://deuavk5443jri"
 
 [sub_resource type="Resource" id="Resource_pxfuw"]
 script = ExtResource("4_g2w03")
@@ -25,7 +26,7 @@ shape = SubResource("RectangleShape2D_ycpq1")
 [node name="DropZone" type="Node2D" parent="Area2D" unique_id=375451525 node_paths=PackedStringArray("attach_spot")]
 script = ExtResource("2_ycpq1")
 attach_spot = NodePath("..")
-drop_behavior = SubResource("Resource_ycpq1")
+drop_behavior = SubResource("Resource_g2w03")
 snap_style = 1
 accepted_draggable_types = Array[ExtResource("4_g2w03")]([SubResource("Resource_pxfuw")])
 metadata/_custom_type_script = "uid://nj1hdjl1vob2"

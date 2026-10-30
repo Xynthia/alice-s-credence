@@ -29,7 +29,8 @@ func instance_word(value : Variant)-> void:
 
 func get_random_pos() -> Vector2:
 	var padding : float = 10
-	var random_x : float = randf_range(global_position.x + padding, rectangle.size.x + global_position.x - padding) * 0.25
-	var random_y : float = randf_range(global_position.y - padding, rectangle.size.y + global_position.y + padding) * 0.25
+	
+	var random_x : float = randi_range(position.x + padding , (rectangle.size.x - padding) + position.x) 
+	var random_y : float = randi_range(position.y + padding , (rectangle.size.y - padding) + position.y) 
 	
 	return Vector2(random_x, random_y)

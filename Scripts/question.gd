@@ -43,10 +43,19 @@ func _on_button_pressed() -> void:
 				GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
 			else:
 				print("no item found")
-		if GameManager.scene_manager.door_ui:
+		elif GameManager.scene_manager.door_ui:
 			var item : Item = GameManager.item_manager.find_word(slot_word.word)
 			if item == GameManager.item_manager.picture:
 				GameManager.end_game(true)
+			else:
+				var next_dialog : DialogActivator = DialogActivator.new()
+				var new_dialog_line : DialogLine = DialogLine.new()
+				
+				new_dialog_line.text = "Doesn't do anything..."
+				new_dialog_line.in_convo_with = GameManager.alice.ALICE
+				
+				next_dialog.dialog_lines.append(new_dialog_line)
+				CutsceneManager.start_dialog(next_dialog)
 
 func _on_return_button_pressed() -> void:
 	GameManager.scene_manager.close_question_screen()

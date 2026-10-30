@@ -9,7 +9,7 @@ var current_line_id : int = 0
 var mc : CharachterInfo = WARREN
 
 var in_dialog : bool = false
-
+signal alice_started_speaking
 
 func start_dialog(next_dialog : DialogActivator) -> void:
 	if next_dialog:
@@ -43,7 +43,6 @@ func go_to_next_line(next_line_id : int) -> void:
 		
 		end_dialog()
 		return
-
 	
 	if current_cutscene.dialog_lines[next_line_id].in_convo_with == null:
 		dialog_ui.show_name_box_right(false)
@@ -51,7 +50,7 @@ func go_to_next_line(next_line_id : int) -> void:
 	elif current_cutscene.dialog_lines[next_line_id].in_convo_with != mc:
 		dialog_ui.show_name_box_right(true)
 		dialog_ui.show_name_box_left(false)
-
+		alice_started_speaking.emit()
 	
 	dialog_ui.change_dialog_text(current_cutscene.dialog_lines[next_line_id].text)
 	current_line_id = next_line_id

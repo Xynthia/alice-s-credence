@@ -16,6 +16,8 @@ var started_game : bool = false
 var finished_intro : bool = false
 var started_end_game : bool = false
 
+
+
 func start_game() -> void:
 	started_game = true
 	await scene_manager.turn_off_main_menu()
@@ -73,6 +75,7 @@ func end_game(good_ending : bool) -> void:
 	scene_manager.question._on_return_button_pressed()
 	item_manager.reset()
 	word_manager.reset()
+	alice.wonderbar.reset()
 	game_timer = 0
 	get_tree().paused = false
 	scene_manager.room_state = scene_manager.rooms.warrens_room

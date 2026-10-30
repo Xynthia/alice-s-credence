@@ -24,6 +24,7 @@ func alice_receiving_question(question : String, action: actions, item : Item) -
 		new_dialog_line.text = "You already asked that... I don't want to."
 		new_dialog_line.in_convo_with = ALICE
 		CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
+		await CutsceneManager.alice_started_speaking
 		show_emote(true, false, false)
 	else:
 		var truthfull_state : thruthfull_states = compair_wonderbar_to_dice_roll()
@@ -116,6 +117,7 @@ func interact(item : Item, truthfull_state: thruthfull_states) -> void:
 		new_dialog_line.text = "I don't want to."
 		new_dialog_line.in_convo_with = ALICE
 		CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
+		await CutsceneManager.alice_started_speaking
 		show_emote(true, false, false)
 		return
 
@@ -124,7 +126,7 @@ func interact(item : Item, truthfull_state: thruthfull_states) -> void:
 	
 	if item.item_to_give.size() > 0:
 		if item == GameManager.item_manager.bed || item == GameManager.item_manager.cabinet || item == GameManager.item_manager.plant || item == GameManager.item_manager.door:
-			await move(item.global_position, truthfull_state)
+			move(item.global_position, truthfull_state)
 		
 		var next_item : Item = item.item_to_give[0]
 		var check_excistance = next_item.check_if_word_excists()

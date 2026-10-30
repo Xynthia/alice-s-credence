@@ -30,7 +30,7 @@ const white : Color = Color.WHITE
 const zoom_camera : Vector2 = Vector2(3.0, 3.0)
 const zoom_intro_camera : Vector2 = Vector2(2.0, 2.0)
 const normal_camera : Vector2 = Vector2(1.0, 1.0)
-const zoom_pos_camera : Vector2 = Vector2(614.39, 219.225) 
+const zoom_pos_camera : Vector2 = Vector2(614.39, 235) 
 const zoom_intro_pos_camera : Vector2 = Vector2(576.0, 520.98) 
 const normal_pos_camera : Vector2 = Vector2(576.0, 320.0)
 
@@ -51,7 +51,7 @@ var clicked_on_pc: bool = false
 var fading : bool = false
 var zooming : bool = false
 
-var question_ui : bool = true
+var question_ui : bool = false
 var door_ui : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -161,7 +161,7 @@ func open_door_screen() -> void:
 	question.door_ui.visible = true
 	question.question_ui.visible = false
 	in_question = true
-	in_question = false
+	question_ui = false
 	door_ui = true
 
 func close_question_screen() -> void:

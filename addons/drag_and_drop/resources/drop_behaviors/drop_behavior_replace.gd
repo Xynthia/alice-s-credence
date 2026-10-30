@@ -10,6 +10,7 @@ func evaluate(zone: DropZone, dropped_area: Area2D) -> DropPlan:
 	
 	# If someone is there, we schedule them for eviction
 	if plan.drop_target and plan.drop_target.occupant and plan.drop_target.occupant != dropped_area:
+		var location_plan = plan.previous 
 		plan.actions.append(ActionEvict.new(plan.drop_target.occupant))
 		
 	return plan

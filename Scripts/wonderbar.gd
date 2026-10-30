@@ -9,6 +9,8 @@ var current_state : int = starting_roll:
 	set(value):
 		current_state = clampi(value, minimum_roll, maximum_roll)
 
+func reset() -> void:
+	current_state = starting_roll
 
 func lower_bar(amount : int) -> void:
 	current_state -= amount

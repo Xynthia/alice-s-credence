@@ -27,7 +27,7 @@ func _ready() -> void:
 	item_manager.items.append(self)
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action("draggable_click") && GameManager.scene_manager.room_state == GameManager.scene_manager.rooms.alice_room && !GameManager.scene_manager.in_question:
+	if event.is_action("draggable_click") && GameManager.scene_manager.room_state == GameManager.scene_manager.rooms.alice_room:
 		var check_excistance = check_if_word_excists()
 		if check_excistance == false:
 			GameManager.word_manager.instance_word(own_word_name)

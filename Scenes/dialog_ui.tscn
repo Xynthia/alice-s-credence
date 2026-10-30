@@ -60,26 +60,23 @@ offset_right = 662.0
 offset_bottom = 399.0
 
 [node name="box" type="Control" parent="." unique_id=107477204]
-custom_minimum_size = Vector2(1152, 300)
+custom_minimum_size = Vector2(1152, 200)
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -300.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset_ratio = Vector2(0.5, 0)
 
 [node name="DialogText" type="Control" parent="box" unique_id=1759570397]
-custom_minimum_size = Vector2(1152.43, 250)
+custom_minimum_size = Vector2(1152.43, 150)
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -250.0
-offset_right = 0.43017578
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.9, 0.9)
@@ -129,13 +126,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="NameBoxLeft" type="Control" parent="box" unique_id=686744429]
-custom_minimum_size = Vector2(400, 50)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 1
 anchors_preset = 0
 offset_left = 100.0
 offset_top = 23.92
-offset_right = 500.0
-offset_bottom = 73.920006
+offset_right = 300.0
+offset_bottom = 73.92
 pivot_offset_ratio = Vector2(0.5, 0)
 offset_transform_enabled = true
 
@@ -197,15 +194,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="NameBoxRight" type="Control" parent="box" unique_id=574560096]
-custom_minimum_size = Vector2(400, 50)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -500.0
+offset_left = -294.40997
 offset_top = 23.5
-offset_right = -100.0
-offset_bottom = 73.50001
+offset_right = -94.40857
+offset_bottom = 73.5
 grow_horizontal = 0
 pivot_offset_ratio = Vector2(0.5, 0)
 offset_transform_enabled = true

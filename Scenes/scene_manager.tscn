@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dn8q6nuhyeo08" path="res://Scenes/alice's_room.tscn" id="9_424ls"]
 [ext_resource type="PackedScene" uid="uid://dpobaxn258lo0" path="res://Scenes/warren.tscn" id="10_aq7jj"]
 [ext_resource type="Texture2D" uid="uid://c48ujgrlhktr8" path="res://assets/TV_blip.png" id="10_vbxak"]
-[ext_resource type="PackedScene" uid="uid://dvuaf7wbonmsd" path="res://Scenes/question.tscn" id="12_ccwmf"]
+[ext_resource type="PackedScene" uid="uid://m51pc4sgpq25" path="res://Scenes/question_2.tscn" id="15_jrumy"]
 
 [sub_resource type="Resource" id="Resource_sym2d"]
 script = ExtResource("3_cjhpt")
@@ -370,7 +370,7 @@ shape = SubResource("RectangleShape2D_vbxak")
 [node name="Detective office" parent="World2D" unique_id=1198369454 instance=ExtResource("2_ccwmf")]
 
 [node name="Camera2D" type="Camera2D" parent="World2D" unique_id=1254064917]
-position = Vector2(576, 320)
+position = Vector2(614.39, 237.535)
 
 [node name="AliceRoomTimer" type="Timer" parent="World2D" unique_id=1747649767]
 wait_time = 1.1
@@ -424,10 +424,10 @@ visible = false
 position = Vector2(488.00003, 184)
 scale = Vector2(0.25, 0.25)
 
-[node name="Question" parent="World2D/scherm" unique_id=1364450598 instance=ExtResource("12_ccwmf")]
+[node name="Question" parent="World2D/scherm" unique_id=757163023 instance=ExtResource("15_jrumy")]
 visible = false
-position = Vector2(496, 184)
-scale = Vector2(0.25, 0.25)
+position = Vector2(450, 184)
+scale = Vector2(0.3, 0.3)
 
 [node name="World3D" type="Node3D" parent="." unique_id=755156172]
 

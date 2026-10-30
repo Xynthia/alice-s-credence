@@ -79,7 +79,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_f85ha"]
 script = ExtResource("5_20rqy")
-text = "Its an old picture of a young boy. On the back there are the initials T.W."
+text = "It's an old picture of a young boy. On the back there are the initials T.W."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -145,7 +145,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_7cmj3"]
 script = ExtResource("5_20rqy")
-text = "Well taken care of shoes, they are old and a bit to big for me. "
+text = "Well taken care of shoes, they are old and a bit too big for me."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -156,7 +156,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_ejvdw"]
 script = ExtResource("5_20rqy")
-text = "Old shoes, bigger then my size."
+text = "Old shoes, bigger than my size."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -167,7 +167,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_j03iy"]
 script = ExtResource("5_20rqy")
-text = "blegh."
+text = "Blegh."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -178,7 +178,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_qy54l"]
 script = ExtResource("5_20rqy")
-text = "They are are well taken care of but old boy clothes."
+text = "They are well taken care of but old boy clothes."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -211,7 +211,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_gdfnv"]
 script = ExtResource("5_20rqy")
-text = "It's a badge of Detective T. Warren.... Why is it here?"
+text = "It's a badge of Detective T. Warren... Why is it here?"
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -222,7 +222,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_3uwlx"]
 script = ExtResource("5_20rqy")
-text = "It's a detective badge"
+text = "It's a detective badge."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -280,7 +280,7 @@ size = Vector2(306.45, 210.045)
 
 [sub_resource type="Resource" id="Resource_8oifu"]
 script = ExtResource("5_20rqy")
-text = "It's a leaking pipe.... poor plant."
+text = "It's a leaking pipe... poor plant."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -291,7 +291,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_1afas"]
 script = ExtResource("5_20rqy")
-text = "It's a leaking pipe.... poor plant."
+text = "It's a leaking pipe... poor plant."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -302,7 +302,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_waw62"]
 script = ExtResource("5_20rqy")
-text = "It's a leaking pipe.... poor plant."
+text = "It's a leaking pipe... poor plant."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -316,7 +316,7 @@ size = Vector2(98.06995, 37.930054)
 
 [sub_resource type="Resource" id="Resource_smfpw"]
 script = ExtResource("5_20rqy")
-text = "It's a calander. From four years ago?"
+text = "It's a calendar. From four years ago?"
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -327,7 +327,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_6y4t5"]
 script = ExtResource("5_20rqy")
-text = "It's a calander. From four years ago?"
+text = "It's a calendar. From four years ago?"
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -338,7 +338,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_nvbpf"]
 script = ExtResource("5_20rqy")
-text = "It's a calander. From four years ago?"
+text = "It's a calendar. From four years ago?"
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -421,7 +421,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_i4x6b"]
 script = ExtResource("5_20rqy")
-text = "The door has a hatch, with the engraving \"What do i want the most?\""
+text = "The door has a hatch with the engraving \"What do I want the most?\""
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -432,7 +432,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_extxf"]
 script = ExtResource("5_20rqy")
-text = "The door has a hatch, with the engraving \"What do i want the most?\""
+text = "The door has a hatch with the engraving \"What do I want the most?\""
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -443,7 +443,8 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_17gj2"]
 script = ExtResource("5_20rqy")
-text = "The door has a hatch, with the engraving \"What do i want the most?\""
+text = "The door has a hatch with the engraving \"What do I want the most?\"
+"
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -457,7 +458,7 @@ size = Vector2(198.06995, 326.06995)
 
 [sub_resource type="Resource" id="Resource_hr2ps"]
 script = ExtResource("5_20rqy")
-text = "There is a set of kids clothes. It looks old but well taken care of."
+text = "There is a set of kids' clothes. It looks old but well taken care of."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -493,7 +494,7 @@ size = Vector2(201.735, 236.125)
 
 [sub_resource type="Resource" id="Resource_o8e5x"]
 script = ExtResource("5_20rqy")
-text = "The plant seems to be wilting but there envelope behind the pot!"
+text = "The plant seems to be wilting, but there is an envelope behind the pot!"
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -515,7 +516,7 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_2yyl0"]
 script = ExtResource("5_20rqy")
-text = "It's dying and smell bad..."
+text = "It's dying and smells bad..."
 in_convo_with = ExtResource("8_ybqny")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 

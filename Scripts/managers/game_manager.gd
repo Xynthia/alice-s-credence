@@ -58,7 +58,7 @@ func end_game(good_ending : bool) -> void:
 	if good_ending:
 		text = "The kidnapper let the authorities know the location of Alice. They were able to save her.\n ...and you were not found guilty of kindnapping Alice"
 	else:
-		text = "You got arrested. \nYou have too much evidence against you. \nYou were sentenced guilty to the kidnapping of alice."
+		text = "You got arrested. \nYou have too much evidence against you. \nYou were sentenced guilty of the kidnapping of Alice."
 		
 	started_end_game = true
 	get_tree().paused = true

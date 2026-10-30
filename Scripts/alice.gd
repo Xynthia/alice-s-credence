@@ -21,7 +21,7 @@ func alice_receiving_question(question : String, action: actions, item : Item) -
 	if question == last_question_asked:
 		wonderbar.lower_bar(1)
 		var new_dialog_line : DialogLine = DialogLine.new()
-		new_dialog_line.text = "You already asked that... i don't want to."
+		new_dialog_line.text = "You already asked that... I don't want to."
 		new_dialog_line.in_convo_with = ALICE
 		CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
 		show_emote(true, false, false)
@@ -43,7 +43,7 @@ func alice_receiving_question(question : String, action: actions, item : Item) -
 						move(item.global_position, truthfull_state)
 					else:
 						var new_dialog_line : DialogLine = DialogLine.new()
-						new_dialog_line.text = "I don't think I can reach that"
+						new_dialog_line.text = "I don't think I can reach that."
 						new_dialog_line.in_convo_with = ALICE
 						CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
 		else:
@@ -106,14 +106,14 @@ func interact(item : Item, truthfull_state: thruthfull_states) -> void:
 	
 	if item == GameManager.item_manager.clothes || item == GameManager.item_manager.police_badge || item == GameManager.item_manager.picture || item == GameManager.item_manager.calender || item == GameManager.item_manager.pipe || item == GameManager.item_manager.lamp || item == GameManager.item_manager.broken_lamp || item == GameManager.item_manager.shoes:
 		var new_dialog_line : DialogLine = DialogLine.new()
-		new_dialog_line.text = "I can't really use this, if i look at it i might find more info."
+		new_dialog_line.text = "I can't really use this, if I look at it, I might find more info."
 		new_dialog_line.in_convo_with = ALICE
 		CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
 		return
 	
 	if item == GameManager.item_manager.plant && item.item_to_give.size() > 0 && truthfull_state == thruthfull_states.NOT_TRUTHFULLY && item.has_been_looked_at || item == GameManager.item_manager.bed && item.item_to_give.size() > 0 && truthfull_state == thruthfull_states.NOT_TRUTHFULLY && item.has_been_looked_at:
 		var new_dialog_line : DialogLine = DialogLine.new()
-		new_dialog_line.text = "i don't want to."
+		new_dialog_line.text = "I don't want to."
 		new_dialog_line.in_convo_with = ALICE
 		CutsceneManager.current_cutscene.dialog_lines.append(new_dialog_line)
 		show_emote(true, false, false)

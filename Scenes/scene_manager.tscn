@@ -23,13 +23,12 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_jrumy"]
 script = ExtResource("3_cjhpt")
-text = "eventually they changed the janitors closet to an office."
+text = "eventually they changed the janitors' closet to an office."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_xqoe6"]
 script = ExtResource("3_cjhpt")
-text = "The police don't have much money.
-so this was already a lot."
+text = "The police don't have much money. So, this was already a lot."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_vbxak"]
@@ -44,7 +43,7 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_ldpl7"]
 script = ExtResource("3_cjhpt")
-text = "A letter with my name and a CD, with play me written on it. "
+text = "A letter with my name and a CD, with 'play me' written on it."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_l5ho0"]
@@ -54,7 +53,7 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_mdpuj"]
 script = ExtResource("3_cjhpt")
-text = " maybe it isn't a joke. I should play it."
+text = "Maybe it isn't a joke. I should play it."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_yuwuw"]
@@ -84,7 +83,7 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_05yv3"]
 script = ExtResource("3_cjhpt")
-text = "Maybe i can talk to her and get some more information about where she is..."
+text = "Maybe I can talk to her and get some more information about where she is..."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_tn3fl"]
@@ -94,12 +93,12 @@ metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="Resource" id="Resource_xcgom"]
 script = ExtResource("3_cjhpt")
-text = "Alice? Alice can you hear me?!"
+text = "Alice? Alice, can you hear me?!"
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_gpsnb"]
 script = ExtResource("3_cjhpt")
-text = "HUH! Who's there! Who are you!"
+text = "HUH! Who's there? Who are you?!"
 in_convo_with = ExtResource("7_sym2d")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -110,7 +109,7 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_metfe"]
 script = ExtResource("3_cjhpt")
-text = "My name is Warren, and i'm a detective working your case."
+text = "My name is Warren, and I'm a detective working on your case."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_vdwm6"]
@@ -121,12 +120,12 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_pgfk7"]
 script = ExtResource("3_cjhpt")
-text = "I'm a detective from the red hearts office, young lady."
+text = "I'm a detective from the Red Hearts office, young lady."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_744tr"]
 script = ExtResource("3_cjhpt")
-text = "My parents don't trust the police, after what happend to my sister... why should I trust you?"
+text = "My parents don't trust the police after what happened to my sister... why should I trust you?"
 in_convo_with = ExtResource("7_sym2d")
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
@@ -137,7 +136,7 @@ metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_r5o5v"]
 script = ExtResource("3_cjhpt")
-text = "I'm sorry for what happend to your sister, but i want to make sure that it doesnt happen to you aswell."
+text = "I'm sorry for what happened to your sister, but I want to make sure that it doesn't happen to you aswell."
 metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
 
 [sub_resource type="Resource" id="Resource_l85vp"]

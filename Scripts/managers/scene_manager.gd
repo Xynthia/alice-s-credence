@@ -101,6 +101,7 @@ func fade_out() -> void:
 		fading = true
 		can_interact = false
 		fade_in_out_screen.color = black
+		fade_in_out_screen.visible = true
 		var tween : Tween = create_tween()
 		tween.tween_property(fade_in_out_screen, "color", transparent, fade_time)
 		await tween.finished
@@ -137,7 +138,7 @@ func zoom_out() ->void:
 
 
 func _on_screen_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if can_interact && event.is_action("draggable_click"):
+	if can_interact && !fading && event.is_action("draggable_click"):
 		clicked_on_pc = true
 		if room_state == rooms.warrens_room:
 			if !zooming:
@@ -210,7 +211,7 @@ func turn_off_main_menu() -> void:
 	main_menu.visible = false
 	camera_2d.zoom = normal_camera
 	camera_2d.global_position = normal_pos_camera
-	fade_out()
+	await fade_out()
 
 func turn_on_main_menu() -> void:
 	main_menu.visible = true

@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func reset() -> void:
 	for word in words:
-		remove_child(word)
+		word.queue_free()
 	words.clear()
 
 func instance_word(value : Variant)-> void:

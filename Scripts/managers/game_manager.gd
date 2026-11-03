@@ -16,8 +16,6 @@ var started_game : bool = false
 var finished_intro : bool = false
 var started_end_game : bool = false
 
-
-
 func start_game() -> void:
 	started_game = true
 	await scene_manager.turn_off_main_menu()

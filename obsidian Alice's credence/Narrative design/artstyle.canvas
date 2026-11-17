@@ -1,0 +1,119 @@
+{
+	"nodes":[
+		{"id":"7161e123bb9e4a07","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20260928155047.png","x":0,"y":0,"width":400,"height":225},
+		{"id":"53699ccecd30cf22","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20260928161333.png","x":-274,"y":92,"width":274,"height":400},
+		{"id":"f7222293de112fb8","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20260928155203.png","x":40,"y":-300,"width":400,"height":225},
+		{"id":"85dcb5e3db1418e4","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20260928161247.png","x":40,"y":225,"width":400,"height":304},
+		{"id":"e695c1f665bea462","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20261001151618.png","x":-920,"y":-900,"width":321,"height":400},
+		{"id":"b197456f346ddf38","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20261001151629.png","x":-599,"y":-900,"width":300,"height":400},
+		{
+			"id":"6364b2f439b03985",
+			"type":"text",
+			"text":"Scattered objects",
+			"styleAttributes":{},
+			"x":-1300,
+			"y":-100,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"75d4f31fede0d8de",
+			"type":"text",
+			"text":"Spills and messes",
+			"styleAttributes":{},
+			"x":-1560,
+			"y":-200,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"162cdc3e0d1d746f",
+			"type":"text",
+			"text":"Unsecured storage",
+			"styleAttributes":{},
+			"x":-1640,
+			"y":-70,
+			"width":260,
+			"height":60
+		},
+		{"id":"abb057ab3025348e","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20261001152206.png","x":-1800,"y":60,"width":400,"height":225},
+		{"id":"fab9b5c3a7884cde","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20261001152232.png","x":-1300,"y":60,"width":400,"height":239},
+		{"id":"13c491c474a93f0d","type":"file","file":"Alice's credence/Narrative design/artstyle/Pasted image 20261001152253.png","x":-1630,"y":340,"width":400,"height":400},
+		{
+			"id":"7ba3d27f5a784829",
+			"type":"text",
+			"text":"Worn-down surfaces A specific spot on a hardwood floor or carpet completely worn away from pacing back and forth in circles while stewing over an issue.",
+			"styleAttributes":{},
+			"x":-2240,
+			"y":-870,
+			"width":260,
+			"height":170
+		},
+		{
+			"id":"cc1c54b2b8d609d3",
+			"type":"text",
+			"text":"- **The \"Quick Fix\" Disaster:** A leaking pipe patched over with layers of duct tape, or a chair leg balanced precariously on a stack of books instead of being repaired.",
+			"styleAttributes":{},
+			"x":-2400,
+			"y":-1140,
+			"width":260,
+			"height":205
+		},
+		{
+			"id":"535540bb78feeb74",
+			"type":"text",
+			"text":"Disorganized Chaos: Important documents mixed in with trash, bills hidden under a pile of laundry, or sticky notes with critical reminders stuck to the wall out of order.\n",
+			"styleAttributes":{},
+			"x":-2210,
+			"y":-580,
+			"width":260,
+			"height":220
+		},
+		{
+			"id":"d1af585ffc905e5e",
+			"type":"text",
+			"text":"Malicious compliance:  An object demanded by someone else is present in the room, but it has been placed in the most inconvenient, spiteful spot possible—like a gifted houseplant shoved into a dark, suffocating closet.",
+			"styleAttributes":{},
+			"x":-1710,
+			"y":-1247,
+			"width":260,
+			"height":230
+		},
+		{
+			"id":"fa5f74b1a9400422",
+			"type":"text",
+			"text":"Neglected Living Things: Houseplants completely dried up right next to a watering can, or an empty pet bowl next to an unopened bag of food.",
+			"styleAttributes":{},
+			"x":-1430,
+			"y":-1217,
+			"width":260,
+			"height":180
+		},
+		{
+			"id":"5717ea820ed69c48",
+			"type":"text",
+			"text":"The untouched repair - A broken chair leg crudely reinforced with layers of duct tape rather than replaced, or a leaking pipe with a bucket underneath that has clearly been there for months. It says, _\"I will fix it my way, or not at all.\"_",
+			"styleAttributes":{},
+			"x":-2000,
+			"y":-1247,
+			"width":260,
+			"height":240
+		},
+		{
+			"id":"2bb5a890c3ef567f",
+			"type":"text",
+			"text":"Frozen time - An old calendar from three years ago still hanging on the wall because the character refuses to accept a change that occurred that year.",
+			"styleAttributes":{},
+			"x":-1620,
+			"y":-720,
+			"width":260,
+			"height":170
+		},
+		{"id":"6219b4e57a8bccb6","type":"file","file":"Alice's credence/Narrative design/Pasted image 20261001154114.png","x":-716,"y":-1340,"width":267,"height":400}
+	],
+	"edges":[],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

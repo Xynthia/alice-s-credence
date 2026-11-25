@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{
+			"id":"c9a2141ebbc2f367",
+			"type":"text",
+			"text":"1.0\neen rechercheur wilt alice beschermen van het kwaad, de enige maneir van contact is via een tv scherm en microfoon praat met alice om haar te laten ontsnappen.\n\n1.1\nde recherchaur is de ontvoerder en wilt een persoonlijke connectie met alice bouwen.\n\n1.2\nje speelt als alice die wilt ontsnappen.\n\n\ninspo:\nhttps://store.steampowered.com/app/2632930/Life_Eater/\n\nhttps://store.steampowered.com/app/221910/The_Stanley_Parable/\n\nhttps://store.steampowered.com/app/1989270/Slay_the_Princess__The_Pristine_Cut/",
+			"styleAttributes":{},
+			"x":-680,
+			"y":-520,
+			"width":260,
+			"height":720
+		},
+		{
+			"id":"1157327d2567e474",
+			"type":"text",
+			"text":"2.0\nexploreer de nieuwe omgeving door je realiteit te breken. creer je een nieuwe realiteit of vind je de balans tussen de twee realiteiten. eet en drink items om je realiteit te veranderen in deze puzzle ervaring.\n(exhte wereld vs wonderland)\n\n2.1\nwonderland vs horror\n\ninspo:\nhttps://store.steampowered.com/app/999220/Amnesia_Rebirth/\n\n",
+			"styleAttributes":{},
+			"x":-400,
+			"y":-520,
+			"width":260,
+			"height":720
+		},
+		{
+			"id":"c4330fb66b5dff63",
+			"type":"text",
+			"text":"3.0\nje word wakker in een nieuwe wereld en snapt niks van wat andere zeggen. vind een manier van communicatie met deze vreemdelingen. ontcijfer de nieuwe taal en vind een manier naar huis toe.\n\n3.1 \ncommunicatie niet schriftelijk maar verbaal.\n\n3.2\ncommunicatie via gebarentaal\n\ninspo:\nhttps://store.steampowered.com/app/1931770/Chants_of_Sennaar/",
+			"styleAttributes":{},
+			"x":-120,
+			"y":-520,
+			"width":260,
+			"height":720
+		}
+	],
+	"edges":[],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

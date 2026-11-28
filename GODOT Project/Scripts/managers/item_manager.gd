@@ -41,7 +41,5 @@ func find_word(word: Word) -> Item:
 	return item
 
 func change_cabinet() -> void:
-	cabinet.truthfull_dialog = cabinet_2.truthfull_dialog
-	cabinet.half_truthfull_dialog = cabinet_2.half_truthfull_dialog
-	cabinet.not_truthfull_dialog = cabinet_2.not_truthfull_dialog
+	cabinet.dialogue_cue = cabinet_2.dialogue_cue
 	cabinet.item_to_give = cabinet_2.item_to_give

@@ -1,0 +1,217 @@
+# reply_cues gets filled by alice.gd right before this cue starts
+~ question
+T. Warren: {{GameManager.alice.last_question_asked}}
+while GameManager.alice.reply_cues.size() > 0
+	=>< {{GameManager.alice.reply_cues.pop_front()}}
+=> END
+
+~ door_nothing
+Alice Liddell: Doesn't do anything...
+=> END
+
+~ already_asked
+Alice Liddell: You already asked that... I don't want to. [#angry]
+=> END
+
+~ dont_want_to
+Alice Liddell: I don't want to. [#angry]
+=> END
+
+~ cant_reach
+Alice Liddell: I don't think I can reach that.
+=> END
+
+~ look_first
+Alice Liddell: I don't understand how you want me to use this... maybe we should look at it first?
+=> END
+
+~ cant_use
+Alice Liddell: I can't really use this, if I look at it, I might find more info.
+=> END
+
+~ already_got
+Alice Liddell: I have already gotten what I can get.
+=> END
+
+# items, cue name is the item's dialogue_cue + _truthful / _half / _not
+# every one needs its => END or it runs on into the next cue
+
+~ box_truthful
+Alice Liddell: It's a box, I should open it... [#star]
+=> END
+
+~ box_half
+Alice Liddell: It's a box, I should open it...
+=> END
+
+~ box_not
+Alice Liddell: It's a box, I should open it... [#confused]
+=> END
+
+~ cabinet2_truthful
+Alice Liddell: There is a police badge! [#star]
+=> END
+
+~ cabinet2_half
+Alice Liddell: There is a police badge!
+=> END
+
+~ cabinet2_not
+Alice Liddell: There is a police badge! [#confused]
+=> END
+
+~ picture_truthful
+Alice Liddell: It's an old picture of a young boy. On the back there are the initials T.W. [#star]
+=> END
+
+~ picture_half
+Alice Liddell: It's an old picture of a young boy.
+=> END
+
+~ picture_not
+Alice Liddell: It's an old picture. [#confused]
+=> END
+
+~ case_file_truthful
+Alice Liddell: It has a picture of a boy! It seems to be a kidnapping case file? [#star]
+=> END
+
+~ case_file_half
+Alice Liddell: It's some information about a boy...
+=> END
+
+~ case_file_not
+Alice Liddell: It just has difficult words. [#confused]
+=> END
+
+~ shoes_truthful
+Alice Liddell: Well taken care of shoes, they are old and a bit too big for me. [#star]
+=> END
+
+~ shoes_half
+Alice Liddell: Old shoes, bigger than my size.
+=> END
+
+~ shoes_not
+Alice Liddell: Blegh. [#confused]
+=> END
+
+~ clothes_truthful
+Alice Liddell: They are well taken care of but old boy clothes. [#star]
+=> END
+
+~ clothes_half
+Alice Liddell: They're old boy clothes.
+=> END
+
+~ clothes_not
+Alice Liddell: My nanny would never leave such old clothes behind. [#confused]
+=> END
+
+~ police_badge_truthful
+Alice Liddell: It's a badge of Detective T. Warren... Why is it here? [#star]
+=> END
+
+~ police_badge_half
+Alice Liddell: It's a detective badge.
+=> END
+
+~ police_badge_not
+Alice Liddell: ... There is no name on this detective badge. [#confused]
+=> END
+
+~ bed_truthful
+Alice Liddell: There's a box underneath the bed! [#star]
+=> END
+
+~ bed_half
+Alice Liddell: There is something under the bed...
+=> END
+
+~ bed_not
+Alice Liddell: I wouldn't want to sleep on such a dirty bed. [#confused]
+=> END
+
+~ pipe_truthful
+Alice Liddell: It's a leaking pipe... poor plant. [#star]
+=> END
+
+~ pipe_half
+Alice Liddell: It's a leaking pipe... poor plant.
+=> END
+
+~ pipe_not
+Alice Liddell: It's a leaking pipe... poor plant. [#confused]
+=> END
+
+~ calender_truthful
+Alice Liddell: It's a calendar. From four years ago? [#star]
+=> END
+
+~ calender_half
+Alice Liddell: It's a calendar. From four years ago?
+=> END
+
+~ calender_not
+Alice Liddell: It's a calendar. From four years ago? [#confused]
+=> END
+
+~ lamp_truthful
+Alice Liddell: It's a lamp, at least this one isn't broken. [#star]
+=> END
+
+~ lamp_half
+Alice Liddell: It's a lamp, at least this one isn't broken.
+=> END
+
+~ lamp_not
+Alice Liddell: It's a lamp, at least this one isn't broken. [#confused]
+=> END
+
+~ broken_lamp_truthful
+Alice Liddell: It's broken... [#star]
+=> END
+
+~ broken_lamp_half
+Alice Liddell: It's broken...
+=> END
+
+~ broken_lamp_not
+Alice Liddell: It's broken... [#confused]
+=> END
+
+~ door_truthful
+Alice Liddell: The door has a hatch with the engraving "What do I want the most?" [#star]
+=> END
+
+~ door_half
+Alice Liddell: The door has a hatch with the engraving "What do I want the most?"
+=> END
+
+~ door_not
+Alice Liddell: The door has a hatch with the engraving "What do I want the most?" [#confused]
+=> END
+
+~ cabinet_truthful
+Alice Liddell: There is a set of kids' clothes. It looks old but well taken care of. [#star]
+=> END
+
+~ cabinet_half
+Alice Liddell: Old clothes.
+=> END
+
+~ cabinet_not
+Alice Liddell: Our nanny would never leave such dirty clothes in a drawer. [#confused]
+=> END
+
+~ plant_truthful
+Alice Liddell: The plant seems to be wilting, but there is an envelope behind the pot! [#star]
+=> END
+
+~ plant_half
+Alice Liddell: It's getting water from the leaking pipe....
+=> END
+
+~ plant_not
+Alice Liddell: It's dying and smells bad... [#confused]
+=> END

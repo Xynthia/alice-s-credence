@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://6uy6ue88hp6t"
+path="res://.godot/imported/alice_room.dialogue-f2be040d4415881a7b0f81f9527be850.tres"
+
+[deps]
+
+source_file="res://Scenes/ui/dialogue/alice_room.dialogue"
+dest_files=["res://.godot/imported/alice_room.dialogue-f2be040d4415881a7b0f81f9527be850.tres"]
+
+[params]
+
+defaults=true

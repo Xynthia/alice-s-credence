@@ -3,6 +3,8 @@ extends Node
 var warren : Warren
 var alice : Alice
 
+var in_dialog : bool = false
+
 var scene_manager : SceneManager
 var word_manager : WordManager
 
@@ -15,6 +17,11 @@ var game_timer : float = 0
 var started_game : bool = false
 var finished_intro : bool = false
 var started_end_game : bool = false
+
+#processes
+func _ready() -> void:
+	DialogueManager.dialogue_started.connect(_on_started)
+	DialogueManager.dialogue_ended.connect(_on_ended)
 
 func start_game() -> void:
 	started_game = true
@@ -38,6 +45,12 @@ func _process(delta: float) -> void:
 		
 	if started_game && finished_intro && !started_end_game && game_timer >= game_time:
 		end_game(false)
+
+#functions
+func _on_started(_resource: DialogueResource) -> void:
+	in_dialog = true
+func _on_ended(_resource: DialogueResource) -> void:
+	in_dialog = false
 
 func show_time(hours_left : int) -> void:
 	get_tree().paused = true

@@ -2,158 +2,13 @@
 
 [ext_resource type="Script" uid="uid://coytepc4mxrb6" path="res://Scripts/world.gd" id="1_aq7jj"]
 [ext_resource type="Script" uid="uid://bqpbn8hx34do8" path="res://Scripts/managers/scene_manager.gd" id="1_vbxak"]
-[ext_resource type="PackedScene" uid="uid://du03nydmw56w8" path="res://Scenes/dialog_ui.tscn" id="1_we8k5"]
+[ext_resource type="Resource" uid="uid://d08oybpe8f7ko" path="res://Scenes/ui/dialogue/intro.dialogue" id="2_0eamy"]
 [ext_resource type="PackedScene" uid="uid://d2jx13l6xuw83" path="res://Scenes/detective_office.tscn" id="2_ccwmf"]
-[ext_resource type="Script" uid="uid://c2wmtfnafrvdl" path="res://resources/dialog_line.gd" id="3_cjhpt"]
-[ext_resource type="Script" uid="uid://lfpo1naeky51" path="res://resources/charachter_info.gd" id="3_wofdf"]
-[ext_resource type="Script" uid="uid://v8q6baj25iv2" path="res://resources/expression_charachters.gd" id="4_hhobr"]
-[ext_resource type="Script" uid="uid://bslh1h6kilg2j" path="res://resources/move_charachter.gd" id="5_wofdf"]
-[ext_resource type="Script" uid="uid://hvdj3dvv56ce" path="res://resources/dialog_activator.gd" id="6_kad1h"]
-[ext_resource type="Resource" uid="uid://dvfvxl3lv3sip" path="res://resources/charachter info/Alice.tres" id="7_sym2d"]
 [ext_resource type="Texture2D" uid="uid://bbljt86wshg4j" path="res://assets/placeholders/main menu.jpg" id="8_vbxak"]
 [ext_resource type="PackedScene" uid="uid://dn8q6nuhyeo08" path="res://Scenes/alice's_room.tscn" id="9_424ls"]
 [ext_resource type="PackedScene" uid="uid://dpobaxn258lo0" path="res://Scenes/warren.tscn" id="10_aq7jj"]
 [ext_resource type="Texture2D" uid="uid://c48ujgrlhktr8" path="res://assets/TV_blip.png" id="10_vbxak"]
 [ext_resource type="PackedScene" uid="uid://m51pc4sgpq25" path="res://Scenes/question_2.tscn" id="15_jrumy"]
-
-[sub_resource type="Resource" id="Resource_sym2d"]
-script = ExtResource("3_cjhpt")
-text = "You remember your promotion and how you wanted a small office to work better."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_jrumy"]
-script = ExtResource("3_cjhpt")
-text = "eventually they changed the janitors' closet to an office."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_xqoe6"]
-script = ExtResource("3_cjhpt")
-text = "The police don't have much money. So, this was already a lot."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_vbxak"]
-script = ExtResource("3_cjhpt")
-text = "..."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_wfdn8"]
-script = ExtResource("3_cjhpt")
-text = "Wait. What is this?"
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_ldpl7"]
-script = ExtResource("3_cjhpt")
-text = "A letter with my name and a CD, with 'play me' written on it."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_l5ho0"]
-script = ExtResource("3_cjhpt")
-text = "Who's sick joke is this?..."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_mdpuj"]
-script = ExtResource("3_cjhpt")
-text = "Maybe it isn't a joke. I should play it."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_yuwuw"]
-script = ExtResource("6_kad1h")
-dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_sym2d"), SubResource("Resource_jrumy"), SubResource("Resource_xqoe6"), SubResource("Resource_vbxak"), SubResource("Resource_wfdn8"), SubResource("Resource_ldpl7"), SubResource("Resource_l5ho0"), SubResource("Resource_mdpuj")])
-metadata/_custom_type_script = "uid://hvdj3dvv56ce"
-
-[sub_resource type="Resource" id="Resource_0deay"]
-script = ExtResource("3_cjhpt")
-text = "What... it's started a program."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_ak33y"]
-script = ExtResource("3_cjhpt")
-text = "Is this... Oh No! "
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_4jqp7"]
-script = ExtResource("3_cjhpt")
-text = "It's Alice, the missing kid!"
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_mbuhx"]
-script = ExtResource("3_cjhpt")
-text = "We only have a few hours left before her file gets closed."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_05yv3"]
-script = ExtResource("3_cjhpt")
-text = "Maybe I can talk to her and get some more information about where she is..."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_tn3fl"]
-script = ExtResource("6_kad1h")
-dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_0deay"), SubResource("Resource_ak33y"), SubResource("Resource_4jqp7"), SubResource("Resource_mbuhx"), SubResource("Resource_05yv3")])
-metadata/_custom_type_script = "uid://hvdj3dvv56ce"
-
-[sub_resource type="Resource" id="Resource_xcgom"]
-script = ExtResource("3_cjhpt")
-text = "Alice? Alice, can you hear me?!"
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_gpsnb"]
-script = ExtResource("3_cjhpt")
-text = "HUH! Who's there? Who are you?!"
-in_convo_with = ExtResource("7_sym2d")
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_hcq8n"]
-script = ExtResource("3_cjhpt")
-text = "Okay good... Atleast that microphone works."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_metfe"]
-script = ExtResource("3_cjhpt")
-text = "My name is Warren, and I'm a detective working on your case."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_vdwm6"]
-script = ExtResource("3_cjhpt")
-text = "A detective? Which district office do you work in?"
-in_convo_with = ExtResource("7_sym2d")
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_pgfk7"]
-script = ExtResource("3_cjhpt")
-text = "I'm a detective from the Red Hearts office, young lady."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_744tr"]
-script = ExtResource("3_cjhpt")
-text = "My parents don't trust the police after what happened to my sister... why should I trust you?"
-in_convo_with = ExtResource("7_sym2d")
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_jotr5"]
-script = ExtResource("3_cjhpt")
-text = "..."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_r5o5v"]
-script = ExtResource("3_cjhpt")
-text = "I'm sorry for what happened to your sister, but I want to make sure that it doesn't happen to you aswell."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_l85vp"]
-script = ExtResource("3_cjhpt")
-text = "So if we work together, we could work out a way to escape. Or maybe even get to know your location."
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_gnukw"]
-script = ExtResource("3_cjhpt")
-text = "Alright... let's try it out..."
-in_convo_with = ExtResource("7_sym2d")
-metadata/_custom_type_script = "uid://c2wmtfnafrvdl"
-
-[sub_resource type="Resource" id="Resource_gghsd"]
-script = ExtResource("6_kad1h")
-dialog_lines = Array[ExtResource("3_cjhpt")]([SubResource("Resource_xcgom"), SubResource("Resource_gpsnb"), SubResource("Resource_hcq8n"), SubResource("Resource_metfe"), SubResource("Resource_vdwm6"), SubResource("Resource_pgfk7"), SubResource("Resource_744tr"), SubResource("Resource_jotr5"), SubResource("Resource_r5o5v"), SubResource("Resource_l85vp"), SubResource("Resource_gnukw")])
-metadata/_custom_type_script = "uid://hvdj3dvv56ce"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqfin"]
 size = Vector2(130, 105.76807)
@@ -335,9 +190,7 @@ size = Vector2(75, 214)
 [node name="SceneManager" type="Node" unique_id=377594497]
 process_mode = 3
 script = ExtResource("1_vbxak")
-intro_dialog = SubResource("Resource_yuwuw")
-alice_on_screen_dialog = SubResource("Resource_tn3fl")
-alice_zoomed_in = SubResource("Resource_gghsd")
+intro_dialog = ExtResource("2_0eamy")
 
 [node name="World2D" type="Node2D" parent="." unique_id=1824969446]
 process_mode = 1
@@ -445,9 +298,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 color = Color(0, 0, 0, 1)
-
-[node name="DialogUI" parent="UI" unique_id=1368191503 instance=ExtResource("1_we8k5")]
-visible = false
 
 [node name="popup" type="Control" parent="UI" unique_id=1570384132]
 visible = false

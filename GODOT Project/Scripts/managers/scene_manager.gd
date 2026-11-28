@@ -1,9 +1,7 @@
 class_name SceneManager
 extends Node
 
-@export var intro_dialog : DialogActivator
-@export var alice_on_screen_dialog : DialogActivator
-@export var alice_zoomed_in : DialogActivator
+@export var intro_dialog : DialogueResource
 
 @onready var fade_in_out_screen: ColorRect = $UI/FadeInOutScreen
 @onready var screen_area_2d: Area2D = $World2D/scherm/ScreenArea2D
@@ -60,29 +58,25 @@ func _ready() -> void:
 	turn_on_main_menu()
 	start_intro()
 
-
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("draggable_click"):
-		if CutsceneManager.in_dialog:
-			CutsceneManager.continue_dialog()
-		else:
+	if Input.is_action_pressed("draggable_click"):
+		if !GameManager.in_dialog:
 			can_interact = true
 
 func start_intro() -> void:
+	DialogueManager.show_dialogue_balloon(intro_dialog, "intro_dialog_p01")
 	can_interact = false
-	if !CutsceneManager.in_dialog:
-		CutsceneManager.start_dialog(intro_dialog)
 
 func start_alice_on_screen_dialog() -> void:
 	await open_screen()
 	can_interact = false
-	if !CutsceneManager.in_dialog:
-		CutsceneManager.start_dialog(alice_on_screen_dialog)
+	if !GameManager.in_dialog:
+		DialogueManager.show_dialogue_balloon(intro_dialog, "intro_dialog_p02")
 
 func start_intr_part_2() -> void:
 	can_interact = false
-	if !CutsceneManager.in_dialog:
-		CutsceneManager.start_dialog(alice_zoomed_in)
+	if !GameManager.in_dialog:
+		DialogueManager.show_dialogue_balloon(intro_dialog, "intro_dialog_p03")
 
 func fade_in() -> void:
 	if !fading:
@@ -138,7 +132,7 @@ func zoom_out() ->void:
 
 
 func _on_screen_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if can_interact && !fading && event.is_action("draggable_click"):
+	if can_interact && !fading && event.is_action_pressed("draggable_click"):
 		clicked_on_pc = true
 		if room_state == rooms.warrens_room:
 			if !zooming:
@@ -206,7 +200,7 @@ func close_screen() -> void:
 	alice_s_room.visible = false
 
 func turn_off_main_menu() -> void:
-	fade_in()
+	await fade_in()
 	await get_tree().create_timer(fade_time).timeout
 	main_menu.visible = false
 	camera_2d.zoom = normal_camera
@@ -221,17 +215,17 @@ func turn_on_main_menu() -> void:
 
 
 func _on_outside_screen_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if can_interact && !in_question && event.is_action("draggable_click"):
+	if can_interact && !in_question && event.is_action_pressed("draggable_click"):
 		if room_state == rooms.alice_room:
 			await zoom_out()
 			room_state = rooms.warrens_room
 
 func _on_start_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action("draggable_click"):
+	if event.is_action_pressed("draggable_click"):
 		GameManager.start_game()
 
 func _on_quit_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action("draggable_click"):
+	if event.is_action_pressed("draggable_click"):
 		get_tree().quit()
 
 

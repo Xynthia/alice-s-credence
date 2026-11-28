@@ -4,6 +4,7 @@ extends Node2D
 @export var space_between_slot_words : int = 20
 
 const SLOT_WORD = preload("uid://b85g32gol80go")
+const ALICE_ROOM_DIALOGUE = preload("res://Scenes/ui/dialogue/alice_room.dialogue")
 
 @onready var slot_word: SlotWord = $SlotWord
 @onready var option_button: OptionButton = $"Control/question ui/OptionButton"
@@ -31,16 +32,10 @@ func _on_button_pressed() -> void:
 		if GameManager.scene_manager.question_ui:
 			var question_string : String = "Alice can you " + str(option_button.get_item_text(option_button.selected)) + " " + str(slot_word.word.word) +"?"
 			var item : Item = GameManager.item_manager.find_word(slot_word.word)
-			
-			var next_dialog : DialogActivator = DialogActivator.new()
-			var next_line : DialogLine = DialogLine.new()
-			
+
 			if item:
-				next_line.text = question_string
-				next_dialog.dialog_lines.append(next_line)
-				
-				CutsceneManager.start_dialog(next_dialog)
 				GameManager.alice.alice_receiving_question(question_string, option_button.selected, item)
+				DialogueManager.show_dialogue_balloon(ALICE_ROOM_DIALOGUE, "question")
 			else:
 				print("no item found")
 		elif GameManager.scene_manager.door_ui:
@@ -48,14 +43,7 @@ func _on_button_pressed() -> void:
 			if item == GameManager.item_manager.picture:
 				GameManager.end_game(true)
 			else:
-				var next_dialog : DialogActivator = DialogActivator.new()
-				var new_dialog_line : DialogLine = DialogLine.new()
-				
-				new_dialog_line.text = "Doesn't do anything..."
-				new_dialog_line.in_convo_with = GameManager.alice.ALICE
-				
-				next_dialog.dialog_lines.append(new_dialog_line)
-				CutsceneManager.start_dialog(next_dialog)
+				DialogueManager.show_dialogue_balloon(ALICE_ROOM_DIALOGUE, "door_nothing")
 
 func _on_return_button_pressed() -> void:
 	GameManager.scene_manager.close_question_screen()

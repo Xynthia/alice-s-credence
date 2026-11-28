@@ -1,0 +1,33 @@
+~ intro_dialog_p01
+You remember your promotion and how you wanted a small office to work better. [#thought]
+eventually they changed the janitors' closet to an office. [#thought]
+The police don't have much money. So, this was already a lot. [#thought]
+T. Warren: ...
+T. Warren: Wait. What is this?
+T. Warren: A letter with my name and a CD, with 'play me' written on it.
+T. Warren: Who's sick joke is this?...
+T. Warren: Maybe it isn't a joke. I should play it.
+=> END
+
+~ intro_dialog_p02
+T. Warren: What... it's started a program.
+T. Warren: Is this... Oh No! 
+T. Warren: It's Alice, the missing kid!
+T. Warren: We only have a few hours left before her file gets closed.
+T. Warren: Maybe I can talk to her and get some more information about where she is...
+=> END
+
+~ intro_dialog_p03
+T. Warren: Alice? Alice, can you hear me?!
+Alice Liddell: HUH! Who's there? Who are you?!
+T. Warren: Okay good... Atleast that microphone works.
+T. Warren: My name is Warren, and I'm a detective working on your case.
+Alice Liddell: A detective? Which district office do you work in?
+T. Warren: I'm a detective from the Red Hearts office, young lady.
+Alice Liddell: My parents don't trust the police after what happened to my sister... why should I trust you?
+T. Warren: ...
+T. Warren: I'm sorry for what happened to your sister, but I want to make sure that it doesn't happen to you aswell.
+T. Warren: So if we work together, we could work out a way to escape. Or maybe even get to know your location.
+Alice Liddell: Alright... let's try it out...
+set GameManager.finished_intro = true
+=> END
